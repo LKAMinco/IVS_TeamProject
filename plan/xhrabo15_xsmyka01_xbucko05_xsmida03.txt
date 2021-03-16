@@ -1,0 +1,65 @@
+//TODO {NAME} - xhrabo15, xsmyka01, xbucko05, xsmida03
+IVS - Team project - Calculator
+Date 15.3.2021
+
+##################################################################################
+
+Meetings: 
+	Communication domain: Discord(private server with voice and text channels)
+	Time of meetings: Every monday at 18:00
+	Alternative form of communication: School email
+	Rules: Polite communication, systematic attendance to work, fulfillment of your duties
+
+##################################################################################
+
+Milestones:
+	18.3. - Github repository, Trello, Plan
+	19.3. - Plan submission
+	8.4.  - Tests, Fundamental operations, Makefile
+	14.4. - Additional functions
+	20.4. - GUI, Mockup, Profilling
+	24.4. - Documentation, In-app hints, User Manual, Installer/Uninstaller
+	28.4. - Final product
+	29.4. - Product submission
+	30.4. - Teamwork feedback
+	21.5. - Installation
+	7.5.  - Presentation
+
+##################################################################################
+
+Work assignments:
+	xhrabo15
+	- Github/Trello set-up/managment
+	- GUI
+	- Link GUI Interface with math library
+	- In-app hints
+	xsmyka01
+	- Fundamental operations
+	- Complex operation
+	- Profilling
+	- Documentation
+	xbucko05
+	- Tests for math libray(tdd)
+	- Link GUI Interface with math library
+	- Makefile
+	- In-app hints
+	xsmida03
+	- Documentation
+	- Makefile
+	- Installer/Uninstaller
+	- Complex operation
+	Shared tasks
+	- Project planning 
+	- Mockup
+	- Debugging
+	- skutecnost.txt creation
+	- README file
+	- Presentation
+
+##################################################################################
+
+Other information:
+	Operation system - Linux
+	App for documentation - Doxygen
+	Programming language - Python
+	GUI - pyQT5
