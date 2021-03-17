@@ -39,7 +39,7 @@ Team members:
 Github:
 	Project name: IVS_TeamProject
 	Access: Team members - through github login or email
-		Teachers - through  ivs.kontrola@gmail.com email
+			Teachers - through  ivs.kontrola@gmail.com email
 
 ##################################################################################
 
