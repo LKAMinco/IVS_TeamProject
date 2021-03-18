@@ -4,7 +4,7 @@ Date 15.3.2021
 
 ##################################################################################
 
-Meetings:
+Meetings: 
 	Communication domain: Discord(private server with voice and text channels)
 	Time of meetings: Every monday at 18:00
 	Alternative form of communication: School email
@@ -29,17 +29,17 @@ Milestones:
 
 Team members:
 	Name:					School login:			Github username:
-		Milan Hrabovský					xhrabo15					LKAMinco
-		Jakub Július Šmýkal			xsmyka01					JuliusJx
-		Filip Bučko							xbucko05					fbucko
-		Šimon Šmída							xsmida03					xsmida03(KA1LASH)
+		Milan Hrabovský				xhrabo15				LKAMinco
+		Jakub Július Šmýkal			xsmyka01				JuliusJx
+		Filip Bučko				xbucko05				fbucko
+		Šimon Šmída				xsmida03				xsmida03(KA1LASH)
 
 ##################################################################################
 
 Github:
 	Project name: IVS_TeamProject
 	Access: Team members - through github login or email
-					Teachers - through  ivs.kontrola@gmail.com email
+		Teachers - through  ivs.kontrola@gmail.com email
 
 ##################################################################################
 
@@ -65,7 +65,7 @@ Work assignments:
 	- Installer/Uninstaller
 	- Complex operation
 	Shared tasks
-	- Project planning
+	- Project planning 
 	- Mockup
 	- Debugging
 	- skutecnost.txt creation
