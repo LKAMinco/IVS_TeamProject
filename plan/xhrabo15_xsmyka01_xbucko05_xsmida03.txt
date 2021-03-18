@@ -31,15 +31,15 @@ Team members:
 	Name:					School login:			Github username:
 		Milan Hrabovský				xhrabo15					LKAMinco
 		Jakub Július Šmýkal			xsmyka01					JuliusJx
-		Filip Bučko					xbucko05					fbucko
-		Šimon Šmída					xsmida03					xsmida03(KA1LASH)
+		Filip Bučko				xbucko05					fbucko
+		Šimon Šmída				xsmida03					xsmida03(KA1LASH)
 
 ##################################################################################
 
 Github:
 	Project name: IVS_TeamProject
 	Access: Team members - through github login or email
-			Teachers - through  ivs.kontrola@gmail.com email
+		Teachers - through  ivs.kontrola@gmail.com email
 
 ##################################################################################
 
