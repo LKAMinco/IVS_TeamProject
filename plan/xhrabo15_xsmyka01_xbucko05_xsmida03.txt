@@ -29,10 +29,10 @@ Milestones:
 
 Team members:
 	Name:					School login:			Github username:
-		Milan Hrabovský				xhrabo15					LKAMinco
-		Jakub Július Šmýkal			xsmyka01					JuliusJx
-		Filip Bučko				xbucko05					fbucko
-		Šimon Šmída				xsmida03					xsmida03(KA1LASH)
+		Milan Hrabovský				xhrabo15				LKAMinco
+		Jakub Július Šmýkal			xsmyka01				JuliusJx
+		Filip Bučko				xbucko05				fbucko
+		Šimon Šmída				xsmida03				xsmida03(KA1LASH)
 
 ##################################################################################
 
