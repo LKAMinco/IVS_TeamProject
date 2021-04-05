@@ -1,0 +1,88 @@
+from math import sin
+from math import cos
+from math import pi
+
+#Addition (a+b)
+def Add(a,b):
+    return a+b
+    
+#Subtraction (a-b)
+def Sub(a,b):
+    return a-b
+
+#Multiplication (a*b)
+def Multiply(a,b):
+    return a*b
+
+#Division (a/b)
+def Divide(a,b):
+    try:
+        return a/b
+    except:
+        print("Error: Division by zero")
+        return None
+
+#Factorial (a!)
+def Fac(a):
+    if a == 1:
+        return 1
+    return a*Fac(a-1)
+
+#Power (a**b)
+def Power(a,b):
+    return a**b
+
+#Root (a**(1/b))
+def Root(a,b):
+    try:
+        return a**(1/b)
+    except:
+        print("Error: Invalid input")
+        return None
+
+#Radians to Degrees conversion
+def Rad2Deg(a):
+    return a * 180 / pi
+
+#Degrees to Radians conversion
+def Deg2Rad(a):
+    return a * pi / 180
+
+#Sin function
+def Sin(a):
+    a = Deg2Rad(a)
+    a = round(sin(a), 10)
+    return a
+
+#Cos function
+def Cos(a):
+    a = Deg2Rad(a)
+    a = round(cos(a), 10)
+    return a
+
+#Absolute value
+def Abs(a):
+    if a >= 0:
+        return a
+    else:
+        return -a
+
+#Engine power conversion
+def PowerConvert(a,b):
+    if b == "HP":
+        return a / 1.34102209
+    elif b == "KW":
+        return a * 1.34102209
+    else:
+        print("Error: Invalid units")
+        return None
+
+#Engine torque conversion
+def TorqueConvert(a,b):
+    if b == "NM":
+        return a * 0.73756214728
+    elif b == "lbs-ft":
+        return a / 0.73756214728
+    else:
+        print("Error: Invalid units")
+        return None
