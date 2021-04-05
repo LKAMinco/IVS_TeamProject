@@ -151,9 +151,8 @@ def PowerConvert(a,b):
         print("Error: Invalid units")
         return None
 
-#Engine torque conversion
 ##
-# @brief    Torque conversion
+# @brief    Engine torque conversion
 # 
 # @param    a    value to be converted
 # @param    b    torque units
