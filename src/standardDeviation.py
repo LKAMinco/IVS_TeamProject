@@ -1,6 +1,8 @@
 #!/usr/bin/python3.8
 
 from MathLib import *
+import sys
+import re
 
 def variance(values):
     N = len(values)
@@ -14,3 +16,16 @@ def variance(values):
 
 def standardDeviation(values):
     return Root(variance(values), 2)
+
+
+# Example of reading comma separated values from stdin
+values = []
+for line in sys.stdin:
+    data = line.strip().replace('\n', ',')
+    # supported separation: (, ) - comma+space
+    #                       (,) - comma only
+    #                       ( ) - space only
+    values += [int(x) for x in re.split(', |,| ', data)]
+
+# Example usage: ./standardDeviation.py < data.txt
+print(standardDeviation(values))
