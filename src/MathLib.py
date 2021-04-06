@@ -12,7 +12,10 @@ from math import pi
 #
 # @return   Sum of a and b
 def Add(a,b):
-    return a+b
+    try:
+        return a+b
+    except TypeError:
+        raise ValueError
     
 ##
 # @brief    Subtraction
@@ -22,7 +25,10 @@ def Add(a,b):
 #
 # @return   Difference of a and b
 def Sub(a,b):
-    return a-b
+    try:
+        return a-b
+    except TypeError:
+        raise  ValueError
 
 ##
 # @brief    Multiplication
@@ -32,7 +38,10 @@ def Sub(a,b):
 #
 # @return   Product of a and b
 def Multiply(a,b):
-    return a*b
+    try:
+        return round(a*b,17)
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Division
@@ -44,9 +53,10 @@ def Multiply(a,b):
 def Divide(a,b):
     try:
         return a/b
-    except:
-        print("Error: Division by zero")
-        return None
+    except ZeroDivisionError:
+        raise ValueError
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Factorial
@@ -55,9 +65,12 @@ def Divide(a,b):
 #
 # @return   Factorial of n
 def Fac(n):
-    if n == 1:
-        return 1
-    return n*Fac(n-1)
+    try:
+        if n == 1:
+            return 1
+        return n*Fac(n-1)
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Power (b^n)
@@ -67,8 +80,12 @@ def Fac(n):
 #
 # @return   Base raised to the exponent
 def Power(b,n):
-    return b**n
-
+    try:
+        if b == 0 and n < 0:
+            return 0
+        return b**n
+    except TypeError:
+        raise ValueError
 ##
 # @brief    Root (r^(1/i))
 # 
@@ -78,10 +95,11 @@ def Power(b,n):
 # @return   i-th root of r
 def Root(r,i):
     try:
-        return r**(1/i)
-    except:
-        print("Error: Invalid input")
-        return None
+        return round(r**(1/i),10)
+    except ValueError:
+        raise ValueError
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Convert radians to degrees
@@ -90,7 +108,10 @@ def Root(r,i):
 #
 # @return   a represented in degrees
 def Rad2Deg(a):
-    return a * 180 / pi
+    try:
+        return a * 180 / pi
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Convert degrees to radians
@@ -99,7 +120,10 @@ def Rad2Deg(a):
 #
 # @return   a represented in radians
 def Deg2Rad(a):
-    return a * pi / 180
+    try:
+        return a * pi / 180
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Sine
@@ -108,9 +132,12 @@ def Deg2Rad(a):
 #
 # @return   Sine of a
 def Sin(a):
-    a = Deg2Rad(a)
-    a = round(sin(a), 10)
-    return a
+    try:
+        a = Deg2Rad(a)
+        a = round(sin(a), 10)
+        return a
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Cosine
@@ -119,9 +146,12 @@ def Sin(a):
 #
 # @return   Cosine of a
 def Cos(a):
-    a = Deg2Rad(a)
-    a = round(cos(a), 10)
-    return a
+    try:
+        a = Deg2Rad(a)
+        a = round(cos(a), 10)
+        return a
+    except:
+        raise ValueError
 
 ##
 # @brief    Absolute value
@@ -130,10 +160,13 @@ def Cos(a):
 #
 # @return   Absolute value of a
 def Abs(a):
-    if a >= 0:
-        return a
-    else:
-        return -a
+    try:
+        if a >= 0:
+            return a
+        else:
+            return -a
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Engine power conversion
@@ -143,13 +176,15 @@ def Abs(a):
 #
 # @return   Converts Horse Power to KiloWatts, respectively
 def PowerConvert(a,b):
-    if b == "HP":
-        return a / 1.34102209
-    elif b == "KW":
-        return a * 1.34102209
-    else:
-        print("Error: Invalid units")
-        return None
+    try:
+        if b == "HP":
+            return round(a / 1.34102209,4)
+        elif b == "KW":
+            return round(a * 1.34102209,4)
+        else:
+            raise ValueError
+    except TypeError:
+        raise ValueError
 
 ##
 # @brief    Engine torque conversion
@@ -159,10 +194,12 @@ def PowerConvert(a,b):
 #
 # @return   Converts NewtonMeter to lbs-ft, respectively
 def TorqueConvert(a,b):
-    if b == "NM":
-        return a * 0.73756214728
-    elif b == "lbs-ft":
-        return a / 0.73756214728
-    else:
-        print("Error: Invalid units")
-        return None
+    try:
+        if b == "NM":
+            return round(a * 0.73756214728,4)
+        elif b == "lbs-ft":
+            return round(a / 0.73756214728,4)
+        else:
+            raise ValueError
+    except TypeError:
+        raise ValueError
