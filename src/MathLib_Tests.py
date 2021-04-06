@@ -392,22 +392,22 @@ class testPowerConvert(unittest.TestCase):
 			MathLib.PowerConvert(10,0.01)
 	
 	def testFloats(self):
-		self.assertEqual(MathLib.PowerConvert(0.5,"HP"),0.37285)
-		self.assertEqual(MathLib.PowerConvert(0.37285,"KW"),0.5)
-		self.assertEqual(MathLib.PowerConvert(-0.5,"HP"),-0.37285)
-		self.assertEqual(MathLib.PowerConvert(-0.37285,"KW"),-0.5)
+		self.assertEqual(MathLib.PowerConvert(0.5,"HP"),0.3729)
+		self.assertEqual(MathLib.PowerConvert(0.3729,"KW"),0.5)
+		self.assertEqual(MathLib.PowerConvert(-0.5,"HP"),-0.3729)
+		self.assertEqual(MathLib.PowerConvert(-0.3729,"KW"),-0.5)
 
 	def testPositiveValues(self):
-		self.assertEqual(MathLib.PowerConvert(10,"HP"),7.45699872)
-		self.assertEqual(MathLib.PowerConvert(7.45699872,"KW"),10)
-		self.assertEqual(MathLib.PowerConvert(550,"HP"),)
-		self.assertEqual(MathLib.PowerConvert(410.1349296,"KW"),550)
+		self.assertEqual(MathLib.PowerConvert(10,"HP"),7.4570)
+		self.assertEqual(MathLib.PowerConvert(7.4570,"KW"),10)
+		self.assertEqual(MathLib.PowerConvert(550,"HP"),410.1349)
+		self.assertEqual(MathLib.PowerConvert(410.1349,"KW"),550)
 
 	def testNegativeValues(self):
-		self.assertEqual(MathLib.PowerConvert(-10,"HP"),-7.45699872)
-		self.assertEqual(MathLib.PowerConvert(-7.45699872,"KW"),-10)
-		self.assertEqual(MathLib.PowerConvert(-550,"HP"),)
-		self.assertEqual(MathLib.PowerConvert(-410.1349296,"KW"),-550)
+		self.assertEqual(MathLib.PowerConvert(-10,"HP"),-7.4570)
+		self.assertEqual(MathLib.PowerConvert(-7.4570,"KW"),-10)
+		self.assertEqual(MathLib.PowerConvert(-550,"HP"),-410.1349)
+		self.assertEqual(MathLib.PowerConvert(-410.1349,"KW"),-550)
 
 
 # Test case to verify the correctness of the conversion
@@ -423,20 +423,20 @@ class testTorqueConvert(unittest.TestCase):
 			MathLib.TorqueConvert(10,0.01)
 	
 	def testFloats(self):
-		self.assertEqual(MathLib.TorqueConvert(0.5,"NM"),0.3687811)
-		self.assertEqual(MathLib.TorqueConvert(0.3687811,"lbs-ft"),0.5)
-		self.assertEqual(MathLib.TorqueConvert(-0.5,"NM"),-0.3687811)
-		self.assertEqual(MathLib.TorqueConvert(-0.3687811,"lbs-ft"),-0.5)
+		self.assertEqual(MathLib.TorqueConvert(0.5,"NM"),0.3688)
+		self.assertEqual(MathLib.TorqueConvert(0.3688,"lbs-ft"),0.5)
+		self.assertEqual(MathLib.TorqueConvert(-0.5,"NM"),-0.3688)
+		self.assertEqual(MathLib.TorqueConvert(-0.3688,"lbs-ft"),-0.5)
 
 	def testPositiveValues(self):
-		self.assertEqual(MathLib.TorqueConvert(10,"NM"),7.375621)
-		self.assertEqual(MathLib.TorqueConvert(7.375621,"lbs-ft"),10)
+		self.assertEqual(MathLib.TorqueConvert(10,"NM"),7.3756)
+		self.assertEqual(MathLib.TorqueConvert(7.3756,"lbs-ft"),10)
 		self.assertEqual(MathLib.TorqueConvert(550,"NM"),405.6592)
 		self.assertEqual(MathLib.TorqueConvert(405.6592,"lbs-ft"),550)
 
 	def testNegativeValues(self):
-		self.assertEqual(MathLib.TorqueConvert(-10,"NM"),-7.375621)
-		self.assertEqual(MathLib.TorqueConvert(-7.375621,"lbs-ft"),-10)
+		self.assertEqual(MathLib.TorqueConvert(-10,"NM"),-7.3756)
+		self.assertEqual(MathLib.TorqueConvert(-7.3756,"lbs-ft"),-10)
 		self.assertEqual(MathLib.TorqueConvert(-550,"NM"),-405.6592)
 		self.assertEqual(MathLib.TorqueConvert(-405.6592,"lbs-ft"),-550)
 
