@@ -1,14 +1,13 @@
 #!/usr/bin/python3.8
 
 from MathLib import *
-import sys
-import re
 from statistics import stdev
+import sys
 
 ## 
 # @brief    Calculate variance from given data
 # 
-# @param    values  list of numbers separated with whitespace
+# @param    values  list of numbers separated by whitespace
 # @return   variance of numbers
 def variance(values):
     N = len(values)
@@ -23,22 +22,20 @@ def variance(values):
 ##
 # @brief    Calculate standard deviation from given data
 #
-# @param    values  list of numbers separated with whitespace
+# @param    values  list of numbers separated by whitespace
 # @return   standard deviation of numbers
 def standardDeviation(values):
     return Root(variance(values), 2)
 
 
-# Example of reading comma separated values from stdin
+# Example of reading values separated by whitespace characters
 values = []
 for line in sys.stdin:
-    data = line.strip().replace('\n', ',')
-    # supported separation: (, ) - comma+space
-    #                       (,) - comma only
-    #                       ( ) - space only
-    values += [float(x) for x in re.split(', |,| ', data)]
+    data = line.strip().replace('\n', ' ')
+    values += [float(x) for x in data.split()]
 
-#print(values)
 # Example usage: ./standardDeviation.py < data.txt
-print(standardDeviation(values))
-print(stdev(values))
+print("{:.2f}".format(standardDeviation(values)))
+
+# Uncomment to compare with official stdev() function
+# print(stdev(values))
