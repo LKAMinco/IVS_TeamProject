@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Description: Script generating input files
+#              off random float numbers used 
+#              in standardDeviation.py
+
+# Usage: ./generate
+
+
+# Input files with different number of data inputs
+FILE_10="data_10.txt"
+FILE_100="data_100.txt"
+FILE_1000="data_1000.txt"
+
+for i in 10 100 1000; do 
+    generate=$(awk -v n=$i -v min=-500 -v max=500 -v seed="$RANDOM" '
+            BEGIN { srand(seed); 
+                    for (i=1; i<=n; i++)
+                        printf("%.2f%s", min+rand()*(max-min+1),
+                                         (i%100==0) ? "\n" : " ");
+            }')
+    FILE="FILE_$i"
+    echo "$generate" > "$FILE"  
+done    
