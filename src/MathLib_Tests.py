@@ -260,11 +260,11 @@ class testRoot(unittest.TestCase):
 
 	def testNegativeRootBase(self):
 		with self.assertRaises(ValueError):
-			Mathlib.Root(-100,2) 
+			MathLib.Root(-100,2) 
 		with self.assertRaises(ValueError):
-			Mathlib.Root(-1000,3)
+			MathLib.Root(-1000,3)
 		with self.assertRaises(ValueError):
-			Mathlib.Root(-1,4)
+			MathLib.Root(-1,4)
 
 	def testEvenExponents(self):
 		self.assertEqual(MathLib.Root(0,2),0)
