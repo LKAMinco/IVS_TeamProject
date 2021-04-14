@@ -418,3 +418,12 @@ class Ui_MainWindow(object):
         self.actionCos_x.setText(_translate("MainWindow", "Cos(x)"))
         self.actionAbs_x.setText(_translate("MainWindow", "Abs(x)"))
         self.actionx.setText(_translate("MainWindow", "x!"))
+        
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
