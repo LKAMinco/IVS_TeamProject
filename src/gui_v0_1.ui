@@ -10,117 +10,20 @@
     <x>0</x>
     <y>0</y>
     <width>300</width>
-    <height>450</height>
+    <height>460</height>
    </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
     <width>300</width>
-    <height>450</height>
+    <height>460</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>300</width>
-    <height>450</height>
+    <height>460</height>
    </size>
-  </property>
-  <property name="palette">
-   <palette>
-    <active>
-     <colorrole role="Button">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-     <colorrole role="Base">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </active>
-    <inactive>
-     <colorrole role="Button">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-     <colorrole role="Base">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </inactive>
-    <disabled>
-     <colorrole role="Button">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-     <colorrole role="Base">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>150</red>
-        <green>150</green>
-        <blue>150</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </disabled>
-   </palette>
   </property>
   <property name="font">
    <font>
@@ -134,7 +37,7 @@
    <number>-1</number>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(150,150,150);</string>
+   <string notr="true">background-color: rgb(50, 50,50); </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -142,18 +45,6 @@
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>300</width>
-     <height>420</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>300</width>
-     <height>420</height>
-    </size>
    </property>
    <property name="baseSize">
     <size>
@@ -170,7 +61,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>280</y>
+      <y>290</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -181,7 +72,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -196,7 +87,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>280</y>
+      <y>290</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -207,7 +98,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -222,7 +113,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>280</y>
+      <y>290</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -233,7 +124,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -251,7 +142,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>140</y>
+      <y>150</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -268,11 +159,9 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
-QPushButton:pressed { background-color: rgb(100, 100, 100);} 
-
-</string>
+QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
     <property name="text">
      <string>9</string>
@@ -288,7 +177,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);}
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>140</y>
+      <y>150</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -299,7 +188,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);}
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -314,7 +203,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>140</y>
+      <y>150</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -325,7 +214,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -340,7 +229,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>210</y>
+      <y>220</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -351,7 +240,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -366,7 +255,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>210</y>
+      <y>220</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -377,7 +266,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -392,7 +281,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>210</y>
+      <y>220</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -403,7 +292,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -418,7 +307,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>350</y>
+      <y>360</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -429,7 +318,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -440,11 +329,11 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <string>0</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_dot">
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>350</y>
+      <y>360</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -455,7 +344,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
@@ -466,11 +355,11 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <string>.</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton_add">
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>280</y>
+      <y>290</y>
       <width>91</width>
       <height>71</height>
      </rect>
@@ -481,9 +370,10 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(42, 213, 116); 
+     <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
-QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
+QPushButton:pressed { background-color: rgb(42, 213, 116);} 
+</string>
     </property>
     <property name="text">
      <string>+</string>
@@ -492,11 +382,11 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      <string>+</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton_sub">
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>210</y>
+      <y>220</y>
       <width>91</width>
       <height>71</height>
      </rect>
@@ -507,9 +397,10 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(42, 213, 116); 
+     <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
-QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
+QPushButton:pressed { background-color: rgb(42, 213, 116);} 
+</string>
     </property>
     <property name="text">
      <string>-</string>
@@ -518,11 +409,11 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      <string>-</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushButton_mul">
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>140</y>
+      <y>150</y>
       <width>91</width>
       <height>71</height>
      </rect>
@@ -533,9 +424,10 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(42, 213, 116); 
+     <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
-QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
+QPushButton:pressed { background-color: rgb(42, 213, 116);} 
+</string>
     </property>
     <property name="text">
      <string>x</string>
@@ -544,11 +436,11 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      <string>*</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="pushButton_div">
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>70</y>
+      <y>80</y>
       <width>91</width>
       <height>71</height>
      </rect>
@@ -559,9 +451,10 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(42, 213, 116); 
+     <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
-QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
+QPushButton:pressed { background-color: rgb(42, 213, 116);} 
+</string>
     </property>
     <property name="text">
      <string>/</string>
@@ -570,11 +463,11 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      <string>/</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="pushButton_result">
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>350</y>
+      <y>360</y>
       <width>91</width>
       <height>71</height>
      </rect>
@@ -585,9 +478,10 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(42, 213, 116); 
+     <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
-QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
+QPushButton:pressed { background-color: rgb(42, 213, 116);} 
+</string>
     </property>
     <property name="text">
      <string>=</string>
@@ -596,11 +490,11 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      <string>Enter</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="pushButton_del">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>70</y>
+      <y>80</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -611,9 +505,10 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(42, 213, 116); 
+     <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
-QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
+QPushButton:pressed { background-color: rgb(42, 213, 116);} 
+</string>
     </property>
     <property name="text">
      <string>DEL</string>
@@ -622,11 +517,11 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      <string>Backspace</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="pushButton_clear">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>350</y>
+      <y>360</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -637,19 +532,22 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(120, 120, 120); 
+     <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
 QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     </property>
     <property name="text">
      <string>C</string>
     </property>
+    <property name="shortcut">
+     <string>Del</string>
+    </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_10">
+   <widget class="QPushButton" name="pushButton_pow">
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>70</y>
+      <y>80</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -660,19 +558,20 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(42, 213, 116); 
+     <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
-QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
+QPushButton:pressed { background-color: rgb(42, 213, 116);} 
+</string>
     </property>
     <property name="text">
      <string>^</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_11">
+   <widget class="QPushButton" name="pushButton_sqr">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>70</y>
+      <y>80</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -683,63 +582,112 @@ QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { background-color: rgb(42, 213, 116); 
+     <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
-QPushButton:pressed { background-color: rgb(37, 190, 98);} </string>
+QPushButton:pressed { background-color: rgb(42, 213, 116);} 
+</string>
     </property>
     <property name="text">
      <string>√</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>300</width>
-      <height>71</height>
+      <width>301</width>
+      <height>81</height>
      </rect>
     </property>
-    <property name="minimumSize">
-     <size>
-      <width>0</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel {border:3px solid rgb(10, 10, 10);
-background-color: rgb(120, 120, 120); color: rgb(255, 255, 255);}
-
-</string>
-    </property>
     <property name="frameShape">
-     <enum>QFrame::Box</enum>
+     <enum>QFrame::Panel</enum>
     </property>
-    <property name="text">
-     <string/>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
     </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_results">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>35</y>
+       <width>291</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:0px solid black;</string>
+     </property>
+     <property name="text">
+      <string comment="0"/>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Normal</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_results">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>5</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {  color : rgb(200,200,200); }</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
    </widget>
+   <zorder>frame</zorder>
+   <zorder>pushButton_five</zorder>
+   <zorder>pushButton_dot</zorder>
+   <zorder>pushButton_del</zorder>
+   <zorder>pushButton_add</zorder>
+   <zorder>pushButton_mul</zorder>
+   <zorder>pushButton_div</zorder>
+   <zorder>pushButton_eight</zorder>
    <zorder>pushButton_one</zorder>
+   <zorder>pushButton_zero</zorder>
    <zorder>pushButton_two</zorder>
+   <zorder>pushButton_result</zorder>
+   <zorder>pushButton_four</zorder>
+   <zorder>pushButton_sqr</zorder>
+   <zorder>pushButton_six</zorder>
+   <zorder>pushButton_clear</zorder>
+   <zorder>pushButton_pow</zorder>
    <zorder>pushButton_three</zorder>
    <zorder>pushButton_nine</zorder>
-   <zorder>pushButton_eight</zorder>
    <zorder>pushButton_seven</zorder>
-   <zorder>pushButton_four</zorder>
-   <zorder>pushButton_five</zorder>
-   <zorder>pushButton_six</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>pushButton_3</zorder>
-   <zorder>pushButton_4</zorder>
-   <zorder>pushButton_5</zorder>
-   <zorder>pushButton_7</zorder>
-   <zorder>pushButton_10</zorder>
-   <zorder>pushButton_11</zorder>
-   <zorder>label</zorder>
-   <zorder>pushButton_8</zorder>
-   <zorder>pushButton_zero</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_6</zorder>
+   <zorder>pushButton_sub</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -750,14 +698,23 @@ background-color: rgb(120, 120, 120); color: rgb(255, 255, 255);}
      <height>30</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar:item:selected {
+background-color: rgb(35, 176, 93);
+        }</string>
+   </property>
    <widget class="QMenu" name="menuFunctions">
+    <property name="styleSheet">
+     <string notr="true">QMenu:selected {background-color: rgb(35, 176, 93);}
+QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
+    </property>
     <property name="title">
      <string>Functions</string>
     </property>
-    <addaction name="actionSin_x"/>
-    <addaction name="actionCos_x"/>
-    <addaction name="actionAbs_x"/>
-    <addaction name="actionx"/>
+    <addaction name="action_sin"/>
+    <addaction name="action_cos"/>
+    <addaction name="action_abs"/>
+    <addaction name="action_fac"/>
    </widget>
    <widget class="QMenu" name="menuConvertor">
     <property name="palette">
@@ -766,27 +723,27 @@ background-color: rgb(120, 120, 120); color: rgb(255, 255, 255);}
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
@@ -804,27 +761,27 @@ background-color: rgb(120, 120, 120); color: rgb(255, 255, 255);}
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
@@ -842,27 +799,27 @@ background-color: rgb(120, 120, 120); color: rgb(255, 255, 255);}
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Base">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
        <colorrole role="Window">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
-          <red>150</red>
-          <green>150</green>
-          <blue>150</blue>
+          <red>50</red>
+          <green>50</green>
+          <blue>50</blue>
          </color>
         </brush>
        </colorrole>
@@ -879,65 +836,123 @@ background-color: rgb(120, 120, 120); color: rgb(255, 255, 255);}
      </palette>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QMenu:selected {background-color: rgb(35, 176, 93);}
+QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     </property>
     <property name="title">
      <string>Convertor</string>
     </property>
-    <addaction name="actionHP_to_KW"/>
-    <addaction name="actionRad_to_Deg"/>
-    <addaction name="actionDeg_to_Rad"/>
-    <addaction name="actionNM_to_Torque"/>
+    <addaction name="action_hp2kw"/>
+    <addaction name="action_rad2deg"/>
+    <addaction name="actiondeg2rad"/>
+    <addaction name="action_nm2torque"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>667</x>
+      <y>343</y>
+      <width>135</width>
+      <height>84</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QMenu:selected {background-color: rgb(35, 176, 93);}
+QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
+    </property>
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionDocumentation"/>
    </widget>
    <addaction name="menuFunctions"/>
    <addaction name="menuConvertor"/>
+   <addaction name="menuHelp"/>
   </widget>
   <action name="actiongdfgd">
    <property name="text">
     <string>gdfgd</string>
    </property>
   </action>
-  <action name="actionHP_to_KW">
+  <action name="action_hp2kw">
    <property name="text">
     <string>HP to KW</string>
    </property>
   </action>
-  <action name="actionRad_to_Deg">
+  <action name="action_rad2deg">
    <property name="text">
     <string>Rad to Deg</string>
    </property>
   </action>
-  <action name="actionDeg_to_Rad">
+  <action name="actiondeg2rad">
    <property name="text">
     <string>Deg to Rad</string>
    </property>
   </action>
-  <action name="actionNM_to_Torque">
+  <action name="action_nm2torque">
    <property name="text">
     <string>NM to Torque</string>
    </property>
   </action>
-  <action name="actionSin_x">
+  <action name="action_sin">
    <property name="text">
     <string>Sin(x)</string>
    </property>
   </action>
-  <action name="actionCos_x">
+  <action name="action_cos">
    <property name="text">
     <string>Cos(x)</string>
    </property>
   </action>
-  <action name="actionAbs_x">
+  <action name="action_abs">
    <property name="text">
     <string>Abs(x)</string>
    </property>
   </action>
-  <action name="actionx">
+  <action name="action_fac">
    <property name="text">
     <string>x!</string>
    </property>
   </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation</string>
+   </property>
+  </action>
+  <action name="actionfsdfs">
+   <property name="text">
+    <string>fsdfs</string>
+   </property>
+  </action>
  </widget>
+ <tabstops>
+  <tabstop>pushButton_clear</tabstop>
+  <tabstop>pushButton_zero</tabstop>
+  <tabstop>pushButton_dot</tabstop>
+  <tabstop>pushButton_result</tabstop>
+  <tabstop>pushButton_one</tabstop>
+  <tabstop>pushButton_two</tabstop>
+  <tabstop>pushButton_three</tabstop>
+  <tabstop>pushButton_add</tabstop>
+  <tabstop>pushButton_four</tabstop>
+  <tabstop>pushButton_five</tabstop>
+  <tabstop>pushButton_six</tabstop>
+  <tabstop>pushButton_sub</tabstop>
+  <tabstop>pushButton_seven</tabstop>
+  <tabstop>pushButton_eight</tabstop>
+  <tabstop>pushButton_nine</tabstop>
+  <tabstop>pushButton_mul</tabstop>
+  <tabstop>pushButton_del</tabstop>
+  <tabstop>pushButton_sqr</tabstop>
+  <tabstop>pushButton_pow</tabstop>
+  <tabstop>pushButton_div</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
