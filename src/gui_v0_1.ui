@@ -700,7 +700,7 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
       <string notr="true">border:0px solid black; color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string comment="0">566414</string>
+      <string comment="0"/>
      </property>
      <property name="echoMode">
       <enum>QLineEdit::Normal</enum>
@@ -727,7 +727,7 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
       <string notr="true">QLabel {  color : rgb(180,180,180); }</string>
      </property>
      <property name="text">
-      <string>64546</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
