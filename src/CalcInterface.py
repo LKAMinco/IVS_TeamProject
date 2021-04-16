@@ -1,6 +1,6 @@
 # Name:        CalcInterface.py
 # Description: IVS Project 2
-# Author:      Jakub Julius Smykal
+# Author:      Jakub Julius Smykal, Filip Bucko
 # Date:        14.4.2021
 
 import MathLib
@@ -131,7 +131,11 @@ def InputProcessing(input):
 				sInput[i + 2] = '0'
 			number = MathLib.Divide(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '!':
-			number = MathLib.Fac(float(sInput[i-1]))
+			#Checks if number is positive or negative
+			if number >= 0:
+				number = MathLib.Fac(float(number))
+			else:
+				number = -1 * MathLib.Fac(-1*float(number))
 		elif sInput[i] == 'abs':
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1)*float(sInput[i + 3])
