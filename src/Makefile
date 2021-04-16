@@ -25,7 +25,7 @@ init:
 	pip3 install -r requirements.txt
 
 profiling-input:
-	../profiling/gen_input_files 
+	../profiling/generate 
 	mv data_*.txt ../profiling/profiling_input
 
 profiler-output:
