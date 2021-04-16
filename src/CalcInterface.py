@@ -27,7 +27,8 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		self.pushButton_three.clicked.connect(self.digit_pressed)
 		self.pushButton_four.clicked.connect(self.digit_pressed)
 		self.pushButton_five.clicked.connect(self.digit_pressed)
-		self.pushButton_six.clicked.connect(self.digit_pressed)
+		self.pushButton_six.clicked.connect(self.digit_pressed)	
+		self.pushButton_seven.clicked.connect(self.digit_pressed)
 		self.pushButton_eight.clicked.connect(self.digit_pressed)
 		self.pushButton_nine.clicked.connect(self.digit_pressed)
 	
