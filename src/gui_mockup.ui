@@ -31,11 +31,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>CalculaThor</string>
-  </property>
-  <property name="windowIcon">
-   <iconset>
-    <normaloff>logo.png</normaloff>logo.png</iconset>
+   <string>Calculator</string>
   </property>
   <property name="toolTipDuration">
    <number>-1</number>
@@ -75,9 +71,6 @@
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>Number 1</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
@@ -104,9 +97,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>Number 2</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
@@ -132,9 +122,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <font>
       <pointsize>15</pointsize>
      </font>
-    </property>
-    <property name="toolTip">
-     <string>Number 3</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -168,9 +155,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
     <property name="mouseTracking">
      <bool>false</bool>
     </property>
-    <property name="toolTip">
-     <string>Number 9</string>
-    </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
@@ -203,9 +187,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>Number 8</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
@@ -231,9 +212,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <font>
       <pointsize>15</pointsize>
      </font>
-    </property>
-    <property name="toolTip">
-     <string>Number 7</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -261,9 +239,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>Number 4</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
@@ -289,9 +264,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <font>
       <pointsize>15</pointsize>
      </font>
-    </property>
-    <property name="toolTip">
-     <string>Number 5</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -319,9 +291,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>Number 6</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
@@ -347,9 +316,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <font>
       <pointsize>15</pointsize>
      </font>
-    </property>
-    <property name="toolTip">
-     <string>Number 0</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -377,9 +343,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
       <pointsize>20</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>Decimal separator</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
@@ -405,9 +368,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <font>
       <pointsize>15</pointsize>
      </font>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Addition&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;-----------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Sum of a and b&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
@@ -436,9 +396,6 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Subtraction&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;-------------------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Difference of a and b&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
@@ -465,9 +422,6 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
      <font>
       <pointsize>15</pointsize>
      </font>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Multiplication&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;---------------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Product of a and b&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
@@ -496,12 +450,6 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Division&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;-----------------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Quotient of a and b&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="whatsThis">
-     <string/>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
@@ -529,9 +477,6 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>Result</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
@@ -542,7 +487,7 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
      <string>=</string>
     </property>
     <property name="shortcut">
-     <string>Enter, Return</string>
+     <string>Enter</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_del">
@@ -558,9 +503,6 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
      <font>
       <pointsize>15</pointsize>
      </font>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delete one character&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
@@ -589,9 +531,6 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>Clear all</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} 
@@ -618,9 +557,6 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
       <pointsize>15</pointsize>
      </font>
     </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Power (b^n)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;------------------------------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;b - base    &lt;/p&gt;&lt;p&gt;n - exponent&lt;/p&gt;&lt;p&gt;Base raised to the exponent&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
 border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);}
@@ -644,9 +580,6 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
      <font>
       <pointsize>15</pointsize>
      </font>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Root (r^(1/i))&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;-------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;r - radicand&lt;/p&gt;&lt;p&gt;i - index&lt;/p&gt;&lt;p&gt;i-th root of r&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
@@ -938,6 +871,20 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     </property>
     <addaction name="actionDocumentation"/>
    </widget>
+   <widget class="QMenu" name="menuMatrix">
+    <property name="styleSheet">
+     <string notr="true">QMenu:selected {background-color: rgb(35, 176, 93);}
+QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
+    </property>
+    <property name="title">
+     <string>Matrix</string>
+    </property>
+    <addaction name="actionDeterminant"/>
+    <addaction name="actionTranspose"/>
+    <addaction name="actionCramer_s_rule"/>
+    <addaction name="actionMultiplication"/>
+   </widget>
+   <addaction name="menuMatrix"/>
    <addaction name="menuFunctions"/>
    <addaction name="menuConvertor"/>
    <addaction name="menuHelp"/>
@@ -985,9 +932,6 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
   <action name="action_fac">
    <property name="text">
     <string>x!</string>
-   </property>
-   <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Factorial&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;--------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Factorial of n&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </action>
   <action name="actionDocumentation">
