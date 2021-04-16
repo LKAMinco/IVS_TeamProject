@@ -1,3 +1,8 @@
+# Name:        MathLib.py
+# Description: IVS Project 2
+# Authors:     Jakub Julius Smykal, Simon Smida
+# Date:        16.4.2021
+
 #!/usr/bin/python
 
 from math import sin
@@ -66,7 +71,7 @@ def Divide(a,b):
 # @return   Factorial of n
 def Fac(n):
     try:
-        if n == 1:
+        if n == 1 or n == 0:
             return 1
         return n*Fac(n-1)
     except TypeError:
