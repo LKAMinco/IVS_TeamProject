@@ -697,10 +697,10 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">border:0px solid black;</string>
+      <string notr="true">border:0px solid black; color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string comment="0"/>
+      <string comment="0">566414</string>
      </property>
      <property name="echoMode">
       <enum>QLineEdit::Normal</enum>
@@ -724,10 +724,10 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel {  color : rgb(200,200,200); }</string>
+      <string notr="true">QLabel {  color : rgb(180,180,180); }</string>
      </property>
      <property name="text">
-      <string/>
+      <string>64546</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -766,14 +766,17 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QMenuBar:item:selected {
-background-color: rgb(35, 176, 93);
+    <string notr="true">QMenuBar:item{color: rgb(255, 255, 255);
+        }
+QMenuBar:item:selected {
+background-color: rgb(35, 176, 93); color: rgb(255, 255, 255);
         }</string>
    </property>
    <widget class="QMenu" name="menuFunctions">
     <property name="styleSheet">
-     <string notr="true">QMenu:selected {background-color: rgb(35, 176, 93);}
-QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
+     <string notr="true">QMenu {color: rgb(255, 255, 255);}
+QMenu:selected {background-color: rgb(35, 176, 93); color: rgb(255, 255, 255);}
+QMenu:pressed {background-color: rgb(42, 213, 116); color: rgb(255, 255, 255);}</string>
     </property>
     <property name="title">
      <string>Functions</string>
@@ -787,12 +790,39 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     <property name="palette">
      <palette>
       <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
           <red>50</red>
           <green>50</green>
           <blue>50</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -820,17 +850,53 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
           <red>42</red>
           <green>213</green>
           <blue>116</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="NoBrush">
+         <color alpha="128">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
       </active>
       <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
           <red>50</red>
           <green>50</green>
           <blue>50</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -861,14 +927,50 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
          </color>
         </brush>
        </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="NoBrush">
+         <color alpha="128">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
       </inactive>
       <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
        <colorrole role="Button">
         <brush brushstyle="SolidPattern">
          <color alpha="255">
           <red>50</red>
           <green>50</green>
           <blue>50</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
          </color>
         </brush>
        </colorrole>
@@ -899,11 +1001,21 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
          </color>
         </brush>
        </colorrole>
+       <colorrole role="PlaceholderText">
+        <brush brushstyle="NoBrush">
+         <color alpha="128">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
       </disabled>
      </palette>
     </property>
     <property name="styleSheet">
-     <string notr="true">QMenu:selected {background-color: rgb(35, 176, 93);}
+     <string notr="true">QMenu {color: rgb(255, 255, 255);}
+QMenu:selected {background-color: rgb(35, 176, 93);}
 QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     </property>
     <property name="title">
@@ -930,7 +1042,8 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">QMenu:selected {background-color: rgb(35, 176, 93);}
+     <string notr="true">QMenu {color: rgb(255, 255, 255);}
+QMenu:selected {background-color: rgb(35, 176, 93);}
 QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     </property>
     <property name="title">
