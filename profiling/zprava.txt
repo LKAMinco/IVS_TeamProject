@@ -1,0 +1,18 @@
+PROFILING
+
+As a profiler we used cProfile.
+
+Profiling was done for 3 different input files:
+        - 10 input values   (data_10.txt)
+        - 100 input values  (data_100.txt)
+        - 1000 input values (data_1000.txt)
+
+These 3 files had been generated with 'generate_input_files' script,
+which filled those files with pseudo random float numbers from range (-500, 500).
+
+We used gprof2dot program to convert the output from the profiler into a dot graph.
+
+# TODO ANALYZE PROFILER OUTPUT
+
+You can view the output images (output_X.png, where X = {10, 100, 1000})
+located in 'profiling_data' folder.
