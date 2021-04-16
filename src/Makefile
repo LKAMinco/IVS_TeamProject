@@ -8,8 +8,8 @@ all: profile #  + project compilation
 #run: TODO - spustenie programu
 
 profile: # TODO - zistit ci je nutne aj tento program profilovat
-	@echo "Calculating standard deviation - input file: data_1000.txt"
-	./standardDeviation.py < ../profiling/profiling_input/data_1000.txt
+	@echo "stddev.py is ready to run: ./"
+	./stddev.py < ../profiling/profiling_input/data_1000.txt
 
 test: 
 	python3 -m MathLib_Tests
@@ -24,17 +24,18 @@ reqs:
 init:
 	pip3 install -r requirements.txt
 
+
 profiling-input:
 	../profiling/generate 
 	mv data_*.txt ../profiling/profiling_input
 
 profiler-output:
 	python3 -m cProfile -o test.pstats10 \
-		./standardDeviation.py < ../profiling/profiling_input/data_10.txt
+		./stddev.py < ../profiling/profiling_input/data_10.txt
 	python3 -m cProfile -o test.pstats100 \
-		./standardDeviation.py < ../profiling/profiling_input/data_100.txt
+		./stddev.py < ../profiling/profiling_input/data_100.txt
 	python3 -m cProfile -o test.pstats1000 \
-		./standardDeviation.py < ../profiling/profiling_input/data_1000.txt
+		./stddev.py < ../profiling/profiling_input/data_1000.txt
 	mv test.pstats* ../profiling/profiler_output
 
 profiling-images:
