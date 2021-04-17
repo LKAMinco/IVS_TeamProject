@@ -66,7 +66,9 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	def decimal_pressed(self):	
 		#Verification of multiple occurence of decimal point
 		newLabel = self.lineEdit_results.text()
-		if (newLabel.count('.')==0):
+		
+		numbers = re.split('(\+|\-|\*|\/|\!|abs|sin|cos|\^|\√)' ,newLabel)
+		if (numbers[-1].count('.')==0):
 			self.lineEdit_results.setText(newLabel + '.')
 	
 	def clear_pressed(self):
@@ -78,33 +80,61 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 
 	def add_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + button.text()
-		self.lineEdit_results.setText(newLabel)
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			operations = ['*','/','+','-','^','√']
+			if newLabel[-1] not in operations:
+				newLabel += button.text()
+				self.lineEdit_results.setText(newLabel)
 	
 	def sub_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + button.text()
-		self.lineEdit_results.setText(newLabel)
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			if len(newLabel)>1:
+				operations = ['*','/','+','-','^','√']
+				if not (newLabel[-1] == '-' and (newLabel[-2] in operations)):
+					newLabel += button.text()
+					self.lineEdit_results.setText(newLabel)
+		else:
+				newLabel += button.text()
+				self.lineEdit_results.setText(newLabel)
 	
 	def mul_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + '*'
-		self.lineEdit_results.setText(newLabel)
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			operations = ['*','/','+','-','^','√']
+			if newLabel[-1] not in operations:
+				newLabel += '*'
+				self.lineEdit_results.setText(newLabel)
 	
 	def div_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + button.text()
-		self.lineEdit_results.setText(newLabel)
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			operations = ['*','/','+','-','^','√']
+			if newLabel[-1] not in operations:
+				newLabel += button.text()
+				self.lineEdit_results.setText(newLabel)
 
 	def pow_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + button.text()
-		self.lineEdit_results.setText(newLabel)
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			operations = ['*','/','+','-','^','√']
+			if newLabel[-1] not in operations:
+				newLabel += button.text()
+				self.lineEdit_results.setText(newLabel)
 	
 	def sqr_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + button.text()
-		self.lineEdit_results.setText(newLabel)
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			operations = ['*','/','+','-','^']
+			if newLabel[-1] not in operations:
+				newLabel += button.text()
+				self.lineEdit_results.setText(newLabel)
 	
 	def result_pressed(self):
 		result = self.lineEdit_results.text()
@@ -115,18 +145,25 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text() + 'sin'
 		self.lineEdit_results.setText(newLabel)
+	
 	def cos_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text() + 'cos' 
 		self.lineEdit_results.setText(newLabel)
+	
 	def abs_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text() + 'abs'
 		self.lineEdit_results.setText(newLabel)
+	
 	def fac_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + '!'
-		self.lineEdit_results.setText(newLabel)
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			operations = ['*','/','+','-','^','√']
+			if newLabel[-1] not in operations:
+				newLabel += button.text()
+				self.lineEdit_results.setText(newLabel)
 ##
 # @brief    Processing of user input
 #
