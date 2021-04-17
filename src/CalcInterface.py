@@ -54,6 +54,12 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		self.action_abs.triggered.connect(self.abs_pressed)
 		self.action_fac.triggered.connect(self.fac_pressed)
 
+		#Create button connections for convertor 	
+		self.action_hp2kw.triggered.connect(self.hp2kw_pressed)
+		self.action_rad2deg.triggered.connect(self.rad2deg_pressed)
+		self.actiondeg2rad.triggered.connect(self.deg2rad_pressed)
+		self.action_nm2torque.triggered.connect(self.nm2torque_pressed)
+
 	def digit_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text() + button.text()
@@ -73,9 +79,11 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	
 	def clear_pressed(self):
 		self.lineEdit_results.setText('')	
+		self.label_results.setText('')	
 
 	def del_pressed(self):
 		newLabel = self.lineEdit_results.text()	
+		self.label_results.setText('')	
 		self.lineEdit_results.setText(newLabel[:-1])
 
 	def add_pressed(self):
@@ -138,6 +146,7 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	
 	def result_pressed(self):
 		result = self.lineEdit_results.text()
+		self.label_results.setText(result)
 		result = InputProcessing(result)
 		self.lineEdit_results.setText(str(result))
 
@@ -164,6 +173,39 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			if newLabel[-1] not in operations:
 				newLabel += button.text()
 				self.lineEdit_results.setText(newLabel)
+
+	#Convertor
+	def hp2kw_pressed(self):
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			eval(newLabel)
+			converted = MathLib.PowerConvert(float(newLabel),"HP")
+			self.label_results.setText(self.lineEdit_results.text()+ " HP")
+			self.lineEdit_results.setText(str(converted) + " kW")
+
+	def rad2deg_pressed(self):
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			eval(newLabel)
+			converted = MathLib.Rad2Deg(float(newLabel))
+			self.label_results.setText(self.lineEdit_results.text()+ " rad")
+			self.lineEdit_results.setText(str(converted) + "°")
+
+	def deg2rad_pressed(self):
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			eval(newLabel)
+			converted = MathLib.Deg2Rad(float(newLabel))
+			self.label_results.setText(self.lineEdit_results.text()+ "°")
+			self.lineEdit_results.setText(str(converted) + " rad")
+	
+	def nm2torque_pressed(self):
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			eval(newLabel)
+			converted = MathLib.TorqueConvert(float(newLabel),"NM")
+			self.label_results.setText(self.lineEdit_results.text()+ " NM")
+			self.lineEdit_results.setText(str(converted) + " lbs-ft")
 ##
 # @brief    Processing of user input
 #
