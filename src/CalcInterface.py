@@ -57,8 +57,8 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		#Create button connections for convertor 	
 		self.action_hp2kw.triggered.connect(self.hp2kw_pressed)
 		self.action_rad2deg.triggered.connect(self.rad2deg_pressed)
-		self.actiondeg2rad.triggered.connect(self.deg2rad_pressed)
-		self.action_nm2torque.triggered.connect(self.nm2torque_pressed)
+		self.action_deg2rad.triggered.connect(self.deg2rad_pressed)
+		self.action_nm2lbsft.triggered.connect(self.nm2torque_pressed)
 
 	def digit_pressed(self):
 		button = self.sender()
