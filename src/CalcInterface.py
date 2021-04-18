@@ -256,10 +256,9 @@ def InputProcessing(input):
 			number = MathLib.Divide(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '!':
 			# Checks if number is positive or negative
-			if number >= 0:
-				number = MathLib.Fac(float(number))
-			else:
-				number = -1 * MathLib.Fac(-1*float(number))
+			if number < 0 or not float(number).is_integer():
+				return 'Error'
+			number = MathLib.Fac(float(number))
 		elif sInput[i] == 'abs':
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1)*float(sInput[i + 3])
@@ -285,4 +284,6 @@ def InputProcessing(input):
 			if sInput[i + 1] == '':
 				return 'Error'
 			number = MathLib.Root(float(sInput[i + 1]),float(sInput[i - 1]))
+	if float(number).is_integer():
+		number = int(number)
 	return number
