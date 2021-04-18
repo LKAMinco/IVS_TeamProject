@@ -171,7 +171,7 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		if newLabel:
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
-				newLabel += button.text()
+				newLabel += '!' 
 				self.lineEdit_results.setText(newLabel)
 
 	#Convertor
