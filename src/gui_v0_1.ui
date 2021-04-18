@@ -34,8 +34,11 @@
    <string>CalculaThor</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>logo.png</normaloff>logo.png</iconset>
+   <iconset resource="res_root.qrc">
+    <normaloff>:/logo/logo.png</normaloff>:/logo/logo.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
   </property>
   <property name="toolTipDuration">
    <number>-1</number>
@@ -542,7 +545,7 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
      <string>=</string>
     </property>
     <property name="shortcut">
-     <string>Enter, Return</string>
+     <string>Enter</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_del">
@@ -1021,10 +1024,12 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     <property name="title">
      <string>Convertor</string>
     </property>
-    <addaction name="action_hp2kw"/>
+    <addaction name="action_deg2rad"/>
     <addaction name="action_rad2deg"/>
-    <addaction name="actiondeg2rad"/>
+    <addaction name="action_hp2kw"/>
+    <addaction name="action_kw2hp"/>
     <addaction name="action_nm2torque"/>
+    <addaction name="action_torque2nm"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="enabled">
@@ -1070,7 +1075,7 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     <string>Rad to Deg</string>
    </property>
   </action>
-  <action name="actiondeg2rad">
+  <action name="action_deg2rad">
    <property name="text">
     <string>Deg to Rad</string>
    </property>
@@ -1133,6 +1138,16 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     <string>Multiplication</string>
    </property>
   </action>
+  <action name="action_kw2hp">
+   <property name="text">
+    <string>KW to HP</string>
+   </property>
+  </action>
+  <action name="action_torque2nm">
+   <property name="text">
+    <string>Torque to NM</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>pushButton_clear</tabstop>
@@ -1156,6 +1171,8 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
   <tabstop>pushButton_pow</tabstop>
   <tabstop>pushButton_div</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="res_root.qrc"/>
+ </resources>
  <connections/>
 </ui>
