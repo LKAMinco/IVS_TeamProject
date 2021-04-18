@@ -104,6 +104,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 				if not (newLabel[-1] == '-' and (newLabel[-2] in operations)):
 					newLabel += button.text()
 					self.lineEdit_results.setText(newLabel)
+			elif len(newLabel)==1:
+				newLabel += button.text()
+				if newLabel[0] != '-':
+					self.lineEdit_results.setText(newLabel)
 		else:
 				newLabel += button.text()
 				self.lineEdit_results.setText(newLabel)
