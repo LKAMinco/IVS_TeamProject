@@ -197,13 +197,12 @@ class testFactorial(unittest.TestCase):
 
 	def testNonNaturalNumbers(self):
 		with self.assertRaises(RecursionError):
-			MathLib.Fac(0)
-		with self.assertRaises(RecursionError):
 			MathLib.Fac(-1)
 		with self.assertRaises(RecursionError):
 			MathLib.Fac(2/-1)
 	
 	def testNaturalNumbers(self):
+		self.assertEqual(MathLib.Fac(0),1)
 		self.assertEqual(MathLib.Fac(1),1)
 		self.assertEqual(MathLib.Fac(2),2)
 		self.assertEqual(MathLib.Fac(3),6)
@@ -392,10 +391,10 @@ class testPowerConvert(unittest.TestCase):
 			MathLib.PowerConvert(10,0.01)
 	
 	def testFloats(self):
-		self.assertEqual(MathLib.PowerConvert(0.5,"HP"),0.3729)
-		self.assertEqual(MathLib.PowerConvert(0.3729,"KW"),0.5)
-		self.assertEqual(MathLib.PowerConvert(-0.5,"HP"),-0.3729)
-		self.assertEqual(MathLib.PowerConvert(-0.3729,"KW"),-0.5)
+		self.assertEqual(MathLib.PowerConvert(0.5,"HP"),0.3728)
+		self.assertEqual(MathLib.PowerConvert(0.3728,"KW"),0.5)
+		self.assertEqual(MathLib.PowerConvert(-0.5,"HP"),-0.3728)
+		self.assertEqual(MathLib.PowerConvert(-0.3728,"KW"),-0.5)
 
 	def testPositiveValues(self):
 		self.assertEqual(MathLib.PowerConvert(10,"HP"),7.4570)
