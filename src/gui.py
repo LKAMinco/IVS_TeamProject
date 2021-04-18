@@ -11,7 +11,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import resources
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -390,8 +389,8 @@ class Ui_MainWindow(object):
         self.action_rad2deg.setObjectName("action_rad2deg")
         self.action_deg2rad = QtWidgets.QAction(MainWindow)
         self.action_deg2rad.setObjectName("action_deg2rad")
-        self.action_nm2torque = QtWidgets.QAction(MainWindow)
-        self.action_nm2torque.setObjectName("action_nm2torque")
+        self.action_nm2lbsft = QtWidgets.QAction(MainWindow)
+        self.action_nm2lbsft.setObjectName("action_nm2lbsft")
         self.action_sin = QtWidgets.QAction(MainWindow)
         self.action_sin.setObjectName("action_sin")
         self.action_cos = QtWidgets.QAction(MainWindow)
@@ -414,8 +413,8 @@ class Ui_MainWindow(object):
         self.actionMultiplication.setObjectName("actionMultiplication")
         self.action_kw2hp = QtWidgets.QAction(MainWindow)
         self.action_kw2hp.setObjectName("action_kw2hp")
-        self.action_torque2nm = QtWidgets.QAction(MainWindow)
-        self.action_torque2nm.setObjectName("action_torque2nm")
+        self.action_lbsft2nm = QtWidgets.QAction(MainWindow)
+        self.action_lbsft2nm.setObjectName("action_lbsft2nm")
         self.menuFunctions.addAction(self.action_sin)
         self.menuFunctions.addAction(self.action_cos)
         self.menuFunctions.addAction(self.action_abs)
@@ -424,8 +423,8 @@ class Ui_MainWindow(object):
         self.menuConvertor.addAction(self.action_rad2deg)
         self.menuConvertor.addAction(self.action_hp2kw)
         self.menuConvertor.addAction(self.action_kw2hp)
-        self.menuConvertor.addAction(self.action_nm2torque)
-        self.menuConvertor.addAction(self.action_torque2nm)
+        self.menuConvertor.addAction(self.action_nm2lbsft)
+        self.menuConvertor.addAction(self.action_lbsft2nm)
         self.menuHelp.addAction(self.actionDocumentation)
         self.menuBar.addAction(self.menuFunctions.menuAction())
         self.menuBar.addAction(self.menuConvertor.menuAction())
@@ -503,7 +502,7 @@ class Ui_MainWindow(object):
         self.pushButton_div.setShortcut(_translate("MainWindow", "/"))
         self.pushButton_result.setToolTip(_translate("MainWindow", "Result"))
         self.pushButton_result.setText(_translate("MainWindow", "="))
-        self.pushButton_result.setShortcut(_translate("MainWindow", "Enter" ))
+        self.pushButton_result.setShortcut(_translate("MainWindow", "Enter"))
         self.pushButton_del.setToolTip(_translate("MainWindow", "<html><head/><body><p>Delete one character</p></body></html>"))
         self.pushButton_del.setText(_translate("MainWindow", "DEL"))
         self.pushButton_del.setShortcut(_translate("MainWindow", "Backspace"))
@@ -521,7 +520,7 @@ class Ui_MainWindow(object):
         self.action_hp2kw.setText(_translate("MainWindow", "HP to KW"))
         self.action_rad2deg.setText(_translate("MainWindow", "Rad to Deg"))
         self.action_deg2rad.setText(_translate("MainWindow", "Deg to Rad"))
-        self.action_nm2torque.setText(_translate("MainWindow", "NM to Torque"))
+        self.action_nm2lbsft.setText(_translate("MainWindow", "NM to lbs-ft"))
         self.action_sin.setText(_translate("MainWindow", "Sin(x)"))
         self.action_cos.setText(_translate("MainWindow", "Cos(x)"))
         self.action_abs.setText(_translate("MainWindow", "Abs(x)"))
@@ -534,6 +533,4 @@ class Ui_MainWindow(object):
         self.actionCramer_s_rule.setText(_translate("MainWindow", "Cramer\'s rule"))
         self.actionMultiplication.setText(_translate("MainWindow", "Multiplication"))
         self.action_kw2hp.setText(_translate("MainWindow", "KW to HP"))
-        self.action_torque2nm.setText(_translate("MainWindow", "Torque to NM"))
-
-
+        self.action_lbsft2nm.setText(_translate("MainWindow", "lbs-ft to NM"))

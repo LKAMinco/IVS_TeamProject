@@ -1028,8 +1028,8 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     <addaction name="action_rad2deg"/>
     <addaction name="action_hp2kw"/>
     <addaction name="action_kw2hp"/>
-    <addaction name="action_nm2torque"/>
-    <addaction name="action_torque2nm"/>
+    <addaction name="action_nm2lbsft"/>
+    <addaction name="action_lbsft2nm"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="enabled">
@@ -1080,9 +1080,9 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     <string>Deg to Rad</string>
    </property>
   </action>
-  <action name="action_nm2torque">
+  <action name="action_nm2lbsft">
    <property name="text">
-    <string>NM to Torque</string>
+    <string>NM to lbs-ft</string>
    </property>
   </action>
   <action name="action_sin">
@@ -1143,9 +1143,9 @@ QMenu:pressed {background-color: rgb(42, 213, 116);}</string>
     <string>KW to HP</string>
    </property>
   </action>
-  <action name="action_torque2nm">
+  <action name="action_lbsft2nm">
    <property name="text">
-    <string>Torque to NM</string>
+    <string>lbs-ft to NM</string>
    </property>
   </action>
  </widget>
