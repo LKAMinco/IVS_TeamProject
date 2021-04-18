@@ -229,60 +229,60 @@ def InputProcessing(input):
 		number = sInput[2]
 	else:
 		number = float(sInput[0])
-		for i in range(0, len(sInput)):
-			if sInput[i] == '+':
-				#Checks if next number is positiv or negative, in case of negative number it modifies the list
-				if sInput[i + 1] == '':
-					sInput[i + 1] = int(-1)*float(sInput[i + 3])
-					sInput[i + 2] = '0' #Replacement for '-', wont affect calculations
-				number = MathLib.Add(float(number), float(sInput[i + 1]))
-			elif sInput[i] == '-':
-				if sInput[i + 1] == '': #Look at line 113 for definition
-					sInput[i + 1] = int(-1)*float(sInput[i + 3])
-					sInput[i + 2] = '0'
-				number = MathLib.Sub(float(number), float(sInput[i + 1]))
-			elif sInput[i] == '*':
-				if sInput[i + 1] == '': #Look at line 113 for definition
-					sInput[i + 1] = int(-1)*float(sInput[i + 3])
-					sInput[i + 2] = '0'
-				number = MathLib.Multiply(float(number), float(sInput[i + 1]))
-			elif sInput[i] == '/':
-				if sInput[i + 1] == '': #Look at line 113 for definition
-					sInput[i + 1] = int(-1)*float(sInput[i + 3])
-					sInput[i + 2] = '0'
-				#Division by 0 handling
-				if sInput[i + 1] == '0' or sInput[i + 1] == -0:
-					return 'Error'
-				number = MathLib.Divide(float(number), float(sInput[i + 1]))
-			elif sInput[i] == '!':
-				# Checks if number is positive or negative
-				if number >= 0:
-					number = MathLib.Fac(float(number))
-				else:
-					number = -1 * MathLib.Fac(-1*float(number))
-			elif sInput[i] == 'abs':
-				if sInput[i + 1] == '': #Look at line 113 for definition
-					sInput[i + 1] = int(-1)*float(sInput[i + 3])
-					sInput[i + 2] = '0'
-				number = MathLib.Abs(float(sInput[i + 1]))
-			elif sInput[i] == 'sin':
-				if sInput[i + 1] == '': #Look at line 113 for definition
-					sInput[i + 1] = int(-1)*float(sInput[i + 3])
-					sInput[i + 2] = '0'
-				number = MathLib.Sin(float(sInput[i + 1]))
-			elif sInput[i] == 'cos':
-				if sInput[i + 1] == '': #Look at line 113 for definition
-					sInput[i + 1] = int(-1)*float(sInput[i + 3])
-					sInput[i + 2] = '0'
-				number = MathLib.Cos(float(sInput[i + 1]))
-			elif sInput[i] == '^':
-				if sInput[i + 1] == '': #Look at line 113 for definition
-					sInput[i + 1] = int(-1) * float(sInput[i + 3])
-					sInput[i + 2] = '0'
-				number = MathLib.Power(float(number), float(sInput[i + 1]))
-			elif sInput[i] == '√':
-				#If number is negative it returns error
-				if sInput[i + 1] == '':
-					return 'Error'
-				number = MathLib.Root(float(sInput[i + 1]),float(sInput[i - 1]))
+	for i in range(0, len(sInput)):
+		if sInput[i] == '+':
+			#Checks if next number is positiv or negative, in case of negative number it modifies the list
+			if sInput[i + 1] == '':
+				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				sInput[i + 2] = '0' #Replacement for '-', wont affect calculations
+			number = MathLib.Add(float(number), float(sInput[i + 1]))
+		elif sInput[i] == '-':
+			if sInput[i + 1] == '': #Look at line 113 for definition
+				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				sInput[i + 2] = '0'
+			number = MathLib.Sub(float(number), float(sInput[i + 1]))
+		elif sInput[i] == '*':
+			if sInput[i + 1] == '': #Look at line 113 for definition
+				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				sInput[i + 2] = '0'
+			number = MathLib.Multiply(float(number), float(sInput[i + 1]))
+		elif sInput[i] == '/':
+			if sInput[i + 1] == '': #Look at line 113 for definition
+				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				sInput[i + 2] = '0'
+			#Division by 0 handling
+			if sInput[i + 1] == '0' or sInput[i + 1] == -0:
+				return 'Error'
+			number = MathLib.Divide(float(number), float(sInput[i + 1]))
+		elif sInput[i] == '!':
+			# Checks if number is positive or negative
+			if number >= 0:
+				number = MathLib.Fac(float(number))
+			else:
+				number = -1 * MathLib.Fac(-1*float(number))
+		elif sInput[i] == 'abs':
+			if sInput[i + 1] == '': #Look at line 113 for definition
+				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				sInput[i + 2] = '0'
+			number = MathLib.Abs(float(sInput[i + 1]))
+		elif sInput[i] == 'sin':
+			if sInput[i + 1] == '': #Look at line 113 for definition
+				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				sInput[i + 2] = '0'
+			number = MathLib.Sin(float(sInput[i + 1]))
+		elif sInput[i] == 'cos':
+			if sInput[i + 1] == '': #Look at line 113 for definition
+				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				sInput[i + 2] = '0'
+			number = MathLib.Cos(float(sInput[i + 1]))
+		elif sInput[i] == '^':
+			if sInput[i + 1] == '': #Look at line 113 for definition
+				sInput[i + 1] = int(-1) * float(sInput[i + 3])
+				sInput[i + 2] = '0'
+			number = MathLib.Power(float(number), float(sInput[i + 1]))
+		elif sInput[i] == '√':
+			#If number is negative it returns error
+			if sInput[i + 1] == '':
+				return 'Error'
+			number = MathLib.Root(float(sInput[i + 1]),float(sInput[i - 1]))
 	return number
