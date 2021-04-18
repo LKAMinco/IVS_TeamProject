@@ -392,9 +392,9 @@ class testPowerConvert(unittest.TestCase):
 	
 	def testFloats(self):
 		self.assertEqual(MathLib.PowerConvert(0.5,"HP"),0.3728)
-		self.assertEqual(MathLib.PowerConvert(0.3728,"KW"),0.5)
-		self.assertEqual(MathLib.PowerConvert(-0.5,"HP"),-0.3728)
-		self.assertEqual(MathLib.PowerConvert(-0.3728,"KW"),-0.5)
+		self.assertEqual(MathLib.PowerConvert(0.3728,"KW"),0.4999)
+		self.assertEqual(MathLib.PowerConvert(-0.4999,"HP"),-0.3728)
+		self.assertEqual(MathLib.PowerConvert(-0.3728,"KW"),-0.4999)
 
 	def testPositiveValues(self):
 		self.assertEqual(MathLib.PowerConvert(10,"HP"),7.4570)
