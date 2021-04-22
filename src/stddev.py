@@ -1,8 +1,8 @@
 #!/usr/bin/python3.8
 
 from MathLib import *
-from statistics import stdev
 import sys
+
 
 ## 
 # @brief    Calculate variance from given data
@@ -19,6 +19,7 @@ def variance(values):
     mean = Divide(s_mean, N)
     return Divide(Sub(s_seq, Multiply(N, Power(mean, 2))), N-1)
 
+
 ##
 # @brief    Calculate standard deviation from given data
 #
@@ -28,14 +29,18 @@ def standardDeviation(values):
     return Root(variance(values), 2)
 
 
-# Example of reading values separated by whitespace characters
-values = []
-for line in sys.stdin:
-    data = line.strip().replace('\n', ' ')
-    values += [float(x) for x in data.split()]
+##
+# @brief    Read data from stdin and calculate standard deviation
+# @return   None
+def main():
+    values = []
+    for line in sys.stdin:
+        data = line.strip().replace('\n', ' ')
+        values += [float(x) for x in data.split()]
+
+    print("{:.2f}".format(standardDeviation(values)))
+
 
 # Example usage: ./standardDeviation.py < data.txt
-print("{:.2f}".format(standardDeviation(values)))
-
-# Uncomment to compare with official stdev() function
-# print(stdev(values))
+if __name__ == '__main__':
+    main()
