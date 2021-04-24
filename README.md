@@ -29,8 +29,8 @@ calculathor
 ```
 
 ## Built with
-* Used programming language: [Python](https://www.python.org/)
-* Used software for the Graphical User Interface: [PyQt5](https://pypi.org/project/PyQt5/)
+* [Python](https://www.python.org/) - Programming language we used 
+* [PyQt5](https://pypi.org/project/PyQt5/) - Software for the Graphical User Interface
 
 Environment
 -----------
