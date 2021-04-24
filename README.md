@@ -19,6 +19,7 @@ Automatically installs all necessary software.
 
 ### Package
 Download debian package [here](//TODO)
+</br></br>
 In the same folder where the package was downloaded execute following command:
 ```
 sudo apt install ./calculathor_1.0_amd64.deb
