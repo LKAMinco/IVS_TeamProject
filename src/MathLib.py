@@ -1,7 +1,16 @@
 # Name:        MathLib.py
 # Description: IVS Project 2
-# Authors:     Jakub Julius Smykal, Simon Smida
+# Authors:     Jakub Julius Smykal
 # Date:        16.4.2021
+
+##
+# @file     MathLib.py
+#
+# @author   Jakub Julius Smykal
+#
+# @brief    Basic math library for the calculator
+#
+# @date     16.4.2021
 
 #!/usr/bin/python
 
@@ -208,3 +217,5 @@ def TorqueConvert(a,b):
             raise ValueError
     except TypeError:
         raise ValueError
+
+###

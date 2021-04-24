@@ -1,3 +1,17 @@
+# Name:        stddev.py
+# Description: IVS Project 2
+# Author:      Simon Smida
+# Date:        16.4.2021
+
+##
+# @file     stddev.py
+#
+# @author   Simon Smida
+#
+# @brief    Calculations for profiling
+#
+# @date     16.4.2021
+
 #!/usr/bin/python3.8
 
 from MathLib import *

@@ -3,6 +3,15 @@
 # Author:      Filip Bucko
 # Date:        5.4.2021
 
+##
+# @file     MathLib_Tests.py
+#
+# @author   Filip Bucko
+#
+# @brief    Tests for math library
+#
+# @date     5.4.2021
+
 import unittest
 import MathLib
 
