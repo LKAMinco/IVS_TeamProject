@@ -1,7 +1,16 @@
 # Name:			CalcInterface.py
-# Description:	IVS Project 2
+# Description:		IVS Project 2
 # Authors:		Jakub Julius Smykal, Filip Bucko
 # Date:			14.4.2021
+
+##
+# @file     CalcInterface.py
+#
+# @author   Jakub Julius Smykal, Filip Bucko
+#
+# @brief    Function to gather and process input, joins GUI with math library
+#
+# @date     14.4.2021
 
 import MathLib
 import re
@@ -343,6 +352,10 @@ def InputProcessing(input):
 		number = sInput[2]
 	else:
 		number = float(sInput[0])
+	#Checks if there is a number after operand
+	if sInput[len(sInput)-1] == '' and sInput[len(sInput)-2] != '!' :
+		return 'Error'
+	
 	for i in range(0, len(sInput)):
 		if sInput[i] == '+':
 			#Checks if next number is positiv or negative, in case of negative number it modifies the list
