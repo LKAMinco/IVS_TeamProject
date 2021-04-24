@@ -1,5 +1,6 @@
 # IVS Project 2
 Assignment: Create a calculator with basic mathematical operations, factorial, exponentiation and nth root.
+</br>
 Official: [assignment for 2nd IVS project](http://ivs.fit.vutbr.cz/projekt-2_tymova_spoluprace2020-21.html)
 
 <h1 align="center">CalculaThor</h1>
