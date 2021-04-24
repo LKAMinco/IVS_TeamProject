@@ -1,7 +1,7 @@
-# Name:        CalcInterface.py
-# Description: IVS Project 2
-# Authors:      Jakub Julius Smykal, Filip Bucko
-# Date:        14.4.2021
+# Name:			CalcInterface.py
+# Description:	IVS Project 2
+# Authors:		Jakub Julius Smykal, Filip Bucko
+# Date:			14.4.2021
 
 import MathLib
 import re
@@ -56,9 +56,11 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 
 		#Create button connections for convertor 	
 		self.action_hp2kw.triggered.connect(self.hp2kw_pressed)
+		self.action_kw2hp.triggered.connect(self.kw2hp_pressed)
 		self.action_rad2deg.triggered.connect(self.rad2deg_pressed)
 		self.action_deg2rad.triggered.connect(self.deg2rad_pressed)
-		self.action_nm2lbsft.triggered.connect(self.nm2torque_pressed)
+		self.action_nm2lbsft.triggered.connect(self.nm2lbsft_pressed)
+		self.action_lbsft2nm.triggered.connect(self.lbsft2nm_pressed)
 
 	def digit_pressed(self):
 		button = self.sender()
@@ -87,8 +89,13 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		self.lineEdit_results.setText(newLabel[:-1])
 
 	def add_pressed(self):
+		if(self.label_results.text()):
+			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
 		if newLabel:
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
@@ -96,8 +103,13 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 				self.lineEdit_results.setText(newLabel)
 	
 	def sub_pressed(self):
+		if(self.label_results.text()):
+			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
 		if newLabel:
 			if len(newLabel)>1:
 				operations = ['*','/','+','-','^','√']
@@ -113,8 +125,13 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 				self.lineEdit_results.setText(newLabel)
 	
 	def mul_pressed(self):
+		if(self.label_results.text()):
+			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
 		if newLabel:
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
@@ -122,8 +139,13 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 				self.lineEdit_results.setText(newLabel)
 	
 	def div_pressed(self):
+		if(self.label_results.text()):
+			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
 		if newLabel:
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
@@ -131,8 +153,13 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 				self.lineEdit_results.setText(newLabel)
 
 	def pow_pressed(self):
+		if(self.label_results.text()):
+			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
 		if newLabel:
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
@@ -140,8 +167,13 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 				self.lineEdit_results.setText(newLabel)
 	
 	def sqr_pressed(self):
+		if(self.label_results.text()):
+			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
 		if newLabel:
 			operations = ['*','/','+','-','^']
 			if newLabel[-1] not in operations:
@@ -156,22 +188,37 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 
 	def sin_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + 'sin'
+		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
+		newLabel = newLabel + 'sin'
 		self.lineEdit_results.setText(newLabel)
 	
 	def cos_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + 'cos' 
+		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
+		newLabel = newLabel + 'cos'
 		self.lineEdit_results.setText(newLabel)
 	
 	def abs_pressed(self):
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + 'abs'
+		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
+		newLabel = newLabel + 'abs'
 		self.lineEdit_results.setText(newLabel)
 	
 	def fac_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		units = RemoveUnits(newLabel)
+		if (units != "present"):
+			newLabel = units
 		if newLabel:
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
@@ -182,40 +229,104 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	def hp2kw_pressed(self):
 		newLabel = self.lineEdit_results.text()
 		if newLabel:
-			eval(newLabel)
-			converted = MathLib.PowerConvert(float(newLabel),"HP")
-			self.label_results.setText(self.lineEdit_results.text()+ " HP")
-			self.lineEdit_results.setText(str(converted) + " kW")
+			try:
+				newLabel = eval(newLabel)
+				converted = MathLib.PowerConvert(float(newLabel),"HP")
+				self.label_results.setText(self.lineEdit_results.text()+ " HP")
+				self.lineEdit_results.setText(str(converted) + " kW")
+			except SyntaxError:	
+				self.lineEdit_results.setText("Incorrect format")
+	def kw2hp_pressed(self):
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			try:
+				newLabel = eval(newLabel)
+				converted = MathLib.PowerConvert(float(newLabel),"KW")
+				self.label_results.setText(self.lineEdit_results.text()+ " kW")
+				self.lineEdit_results.setText(str(converted) + " HP")
+			except SyntaxError:	
+				self.lineEdit_results.setText("Incorrect format")
 
 	def rad2deg_pressed(self):
 		newLabel = self.lineEdit_results.text()
 		if newLabel:
-			eval(newLabel)
-			converted = MathLib.Rad2Deg(float(newLabel))
-			self.label_results.setText(self.lineEdit_results.text()+ " rad")
-			self.lineEdit_results.setText(str(converted) + "°")
+			try:
+				newLabel = eval(newLabel)
+				converted = MathLib.Rad2Deg(float(newLabel))
+				self.label_results.setText(self.lineEdit_results.text()+ " rad")
+				self.lineEdit_results.setText(str(converted) + "°")
+			except SyntaxError:	
+				self.lineEdit_results.setText("Incorrect format")
 
 	def deg2rad_pressed(self):
 		newLabel = self.lineEdit_results.text()
 		if newLabel:
-			eval(newLabel)
-			converted = MathLib.Deg2Rad(float(newLabel))
-			self.label_results.setText(self.lineEdit_results.text()+ "°")
-			self.lineEdit_results.setText(str(converted) + " rad")
+			try:
+				newLabel = eval(newLabel)
+				converted = MathLib.Deg2Rad(float(newLabel))
+				self.label_results.setText(self.lineEdit_results.text()+ "°")
+				self.lineEdit_results.setText(str(converted) + " rad")
+			except SyntaxError:	
+				self.lineEdit_results.setText("Incorrect format")
 	
-	def nm2torque_pressed(self):
+	def nm2lbsft_pressed(self):
 		newLabel = self.lineEdit_results.text()
 		if newLabel:
-			eval(newLabel)
-			converted = MathLib.TorqueConvert(float(newLabel),"NM")
-			self.label_results.setText(self.lineEdit_results.text()+ " NM")
-			self.lineEdit_results.setText(str(converted) + " lbs-ft")
+			try:
+				newLabel = eval(newLabel)
+				converted = MathLib.TorqueConvert(float(newLabel),"NM")
+				self.label_results.setText(self.lineEdit_results.text()+ " NM")
+				self.lineEdit_results.setText(str(converted) + " lbs·ft")
+			except SyntaxError:	
+				self.lineEdit_results.setText("Incorrect format")
+	
+	def lbsft2nm_pressed(self):
+		newLabel = self.lineEdit_results.text()
+		if newLabel:
+			try:
+				newLabel = eval(newLabel)
+				converted = MathLib.TorqueConvert(float(newLabel),"lbs-ft")
+				self.label_results.setText(self.lineEdit_results.text()+ " lbs·ft")
+				self.lineEdit_results.setText(str(converted) + " NM")
+			except SyntaxError:	
+				self.lineEdit_results.setText("Incorrect format")
+
 ##
-# @brief    Processing of user input
+# @brief		Removes units from number
 #
-# @param    a input in string format
+# @param num	String containing digits will be adjusted
+#				by tearing off the unitsin string format
 #
-# @return   Calculates the result of inserted numbers,operands
+# @return   	Returns string containing only numbers
+def RemoveUnits(num):
+	operations = ['*','/','+','-','^','√','!','cos','sin','abs']
+	##Variable indicates whether the operation is present in expression from input 
+	present = 0
+	for i in operations:
+		if i in num:
+			present = 1
+			return "present"
+	if not present:	
+		dot_index = num.find('.')
+		if dot_index != -1:
+			num = num.replace('.','0',1)
+		if not (num.isdigit()):
+			while not (num.isdigit()):
+				num = num[:-1]
+			if dot_index != -1:
+				num = num[0:dot_index]+'.'+num[dot_index+1:]
+			return num
+		else:
+			if dot_index != -1:
+				num = num[0:dot_index]+'.'+num[dot_index+1:]
+			return num
+
+##
+# @brief		Processing of user input
+#
+# @param input	An input in string format
+#
+# @return   	Calculates the result of inserted numbers,operands
 
 def InputProcessing(input):
 	#Splits the string according to the operands
