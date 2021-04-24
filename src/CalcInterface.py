@@ -93,10 +93,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
 		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
 				newLabel += button.text()
@@ -107,10 +107,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
 		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 			if len(newLabel)>1:
 				operations = ['*','/','+','-','^','√']
 				if not (newLabel[-1] == '-' and (newLabel[-2] in operations)):
@@ -129,10 +129,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
 		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
 				newLabel += '*'
@@ -143,10 +143,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
 		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
 				newLabel += button.text()
@@ -157,10 +157,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
 		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
 				newLabel += button.text()
@@ -171,10 +171,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
 		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 			operations = ['*','/','+','-','^']
 			if newLabel[-1] not in operations:
 				newLabel += button.text()
@@ -189,37 +189,40 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	def sin_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
+		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 		newLabel = newLabel + 'sin'
 		self.lineEdit_results.setText(newLabel)
 	
 	def cos_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
+		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 		newLabel = newLabel + 'cos'
 		self.lineEdit_results.setText(newLabel)
 	
 	def abs_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
+		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 		newLabel = newLabel + 'abs'
 		self.lineEdit_results.setText(newLabel)
 	
 	def fac_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
-		units = RemoveUnits(newLabel)
-		if (units != "present"):
-			newLabel = units
 		if newLabel:
+			units = RemoveUnits(newLabel)
+			if (units != "present"):
+				newLabel = units
 			operations = ['*','/','+','-','^','√']
 			if newLabel[-1] not in operations:
 				newLabel += '!' 
