@@ -43,7 +43,7 @@ Authors
 ***//TODO {NAME}***
 - xbucko05&nbsp;&nbsp;&nbsp;&nbsp;Filip Bučko
 - xhrabo15&nbsp;&nbsp;&nbsp;&nbsp;Milan Hrabovský
-- xhrabo15&nbsp;&nbsp;&nbsp;&nbsp;Jakub Július Šmýkal
+- xsmyka01&nbsp;&nbsp;&nbsp;&nbsp;Jakub Július Šmýkal
 - xsmida03&nbsp;&nbsp;&nbsp;&nbsp;Šimon Šmída
 
 License
