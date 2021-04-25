@@ -48,4 +48,6 @@ Authors
 
 License
 -------
-This project is licensed under the GNU GPL v.3 license.
+This project is licensed under the GNU GPL v.3 license. 
+</br>
+More detail: [here](https://github.com/LKAMinco/IVS_TeamProject/blob/main/LICENSE.md)
