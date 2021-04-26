@@ -339,16 +339,25 @@ def RemoveUnits(num):
 #
 # @param input	part of input in string format
 #
+# @param min	int to check min size of number
+#
+# @param max	int to check max size of number
+#
+# @param checkChar option to look for invalid chars in string
+#
+# @param checkSize option to check size of number
+#
 # @return   	Returns false if there is something wrong with input
 
-def CheckInput(input, min, max, option):
-	if option == 1:
+def CheckInput(input, min, max, checkChar, chechSize):
+	if checkChar == 1:
 		if re.search('[a-zA-Z]', input):
 			return False
-	if float(input) > max:
-		return False
-	if float(input) < min:
-		return False
+	if chechSize == 1:
+		if float(input) > max:
+			return False
+		if float(input) < min:
+			return False
 	return True
 
 ##
@@ -365,7 +374,7 @@ def InputProcessing(input):
 		return input
 	#This if checks if first inserted number is postive or negative
 	if sInput[0] == '' and sInput[1] == '-':
-		if CheckInput(sInput[2], -10000000, 10000000,1) == False:
+		if CheckInput(sInput[2], -10, 10,1,0) == False:
 			return 'Error'
 		number = -1*float(sInput[2])
 		sInput[1]= '0'
@@ -376,8 +385,6 @@ def InputProcessing(input):
 		number = float(sInput[0])
 	#Checks if there is a number after operand
 	if sInput[len(sInput)-1] == '' and sInput[len(sInput)-2] != '!' :
-		return 'Error'
-	if CheckInput(number, -10000000, 10000000,0) == False:
 		return 'Error'
 	for i in range(0, len(sInput)):
 		if sInput[i] == '+':
@@ -428,7 +435,7 @@ def InputProcessing(input):
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1) * float(sInput[i + 3])
 				sInput[i + 2] = '0'
-			if CheckInput(sInput[i + 1], -10, 10,0) == False:
+			if CheckInput(sInput[i + 1], -10, 10,0,1) == False:
 				return 'Error: Invalid Exponent'
 			number = MathLib.Power(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '√':
