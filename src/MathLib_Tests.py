@@ -205,9 +205,9 @@ class testFactorial(unittest.TestCase):
 			MathLib.Fac(0,1/0)
 
 	def testNonNaturalNumbers(self):
-		with self.assertRaises(RecursionError):
+		with self.assertRaises(AssertionError):
 			MathLib.Fac(-1)
-		with self.assertRaises(RecursionError):
+		with self.assertRaises(AssertionError):
 			MathLib.Fac(2/-1)
 	
 	def testNaturalNumbers(self):

@@ -333,6 +333,24 @@ def RemoveUnits(num):
 				num = num[0:dot_index]+'.'+num[dot_index+1:]
 			return num
 
+
+##
+# @brief		Checks user input for invalid chars and its size
+#
+# @param input	part of input in string format
+#
+# @return   	Returns false if there is something wrong with input
+
+def CheckInput(input, min, max, option):
+	if option == 1:
+		if re.search('[a-zA-Z]', input):
+			return False
+	if float(input) > max:
+		return False
+	if float(input) < min:
+		return False
+	return True
+
 ##
 # @brief		Processing of user input
 #
@@ -343,8 +361,12 @@ def RemoveUnits(num):
 def InputProcessing(input):
 	#Splits the string according to the operands
 	sInput = re.split('(\+|\-|\*|\/|\!|abs|sin|cos|\^|\√)' ,input)
+	if len(sInput) == 1:
+		return input
 	#This if checks if first inserted number is postive or negative
 	if sInput[0] == '' and sInput[1] == '-':
+		if CheckInput(sInput[2], -10000000, 10000000,1) == False:
+			return 'Error'
 		number = -1*float(sInput[2])
 		sInput[1]= '0'
 	#This elif checks if any function which is written in front of the number was inserted
@@ -355,7 +377,8 @@ def InputProcessing(input):
 	#Checks if there is a number after operand
 	if sInput[len(sInput)-1] == '' and sInput[len(sInput)-2] != '!' :
 		return 'Error'
-	
+	if CheckInput(number, -10000000, 10000000,0) == False:
+		return 'Error'
 	for i in range(0, len(sInput)):
 		if sInput[i] == '+':
 			#Checks if next number is positiv or negative, in case of negative number it modifies the list
@@ -405,6 +428,8 @@ def InputProcessing(input):
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1) * float(sInput[i + 3])
 				sInput[i + 2] = '0'
+			if CheckInput(sInput[i + 1], -10, 10,0) == False:
+				return 'Error: Invalid Exponent'
 			number = MathLib.Power(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '√':
 			#If number is negative it returns error

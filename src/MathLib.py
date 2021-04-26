@@ -79,11 +79,18 @@ def Divide(a,b):
 #
 # @return   Factorial of n
 def Fac(n):
+    assert n >= 0
     try:
         if n == 1 or n == 0:
             return 1
-        return n*Fac(n-1)
+        result = 1
+        while n > 1:
+            result = result * n
+            n = n - 1
+        return result
     except TypeError:
+        raise ValueError
+    except AssertionError:
         raise ValueError
 
 ##
