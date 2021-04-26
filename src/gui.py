@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import resources
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -43,6 +43,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_one.setFont(font)
+        self.pushButton_one.setToolTip("")
         self.pushButton_one.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -52,6 +53,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_two.setFont(font)
+        self.pushButton_two.setToolTip("")
         self.pushButton_two.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -61,6 +63,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_three.setFont(font)
+        self.pushButton_three.setToolTip("")
         self.pushButton_three.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -72,6 +75,7 @@ class Ui_MainWindow(object):
         font.setPointSize(15)
         self.pushButton_nine.setFont(font)
         self.pushButton_nine.setMouseTracking(False)
+        self.pushButton_nine.setToolTip("")
         self.pushButton_nine.setAutoFillBackground(False)
         self.pushButton_nine.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
@@ -83,6 +87,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_eight.setFont(font)
+        self.pushButton_eight.setToolTip("")
         self.pushButton_eight.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -92,6 +97,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_seven.setFont(font)
+        self.pushButton_seven.setToolTip("")
         self.pushButton_seven.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -101,6 +107,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_four.setFont(font)
+        self.pushButton_four.setToolTip("")
         self.pushButton_four.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -110,6 +117,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_five.setFont(font)
+        self.pushButton_five.setToolTip("")
         self.pushButton_five.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -119,6 +127,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_six.setFont(font)
+        self.pushButton_six.setToolTip("")
         self.pushButton_six.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -128,6 +137,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.pushButton_zero.setFont(font)
+        self.pushButton_zero.setToolTip("")
         self.pushButton_zero.setStyleSheet("QPushButton { background-color: rgb(50, 50, 50); \n"
 "border: 1px outset rgb(20,20,20); color: rgb(255, 255, 255);} \n"
 "QPushButton:pressed { background-color: rgb(100, 100, 100);} ")
@@ -248,6 +258,7 @@ class Ui_MainWindow(object):
         self.lineEdit_results.setText("")
         self.lineEdit_results.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.lineEdit_results.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lineEdit_results.setReadOnly(True)
         self.lineEdit_results.setObjectName("lineEdit_results")
         self.label_results = QtWidgets.QLabel(self.frame)
         self.label_results.setGeometry(QtCore.QRect(20, 5, 271, 31))
@@ -455,34 +466,24 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "CalculaThor"))
-        self.pushButton_one.setToolTip(_translate("MainWindow", "Number 1"))
         self.pushButton_one.setText(_translate("MainWindow", "1"))
         self.pushButton_one.setShortcut(_translate("MainWindow", "1"))
-        self.pushButton_two.setToolTip(_translate("MainWindow", "Number 2"))
         self.pushButton_two.setText(_translate("MainWindow", "2"))
         self.pushButton_two.setShortcut(_translate("MainWindow", "2"))
-        self.pushButton_three.setToolTip(_translate("MainWindow", "Number 3"))
         self.pushButton_three.setText(_translate("MainWindow", "3"))
         self.pushButton_three.setShortcut(_translate("MainWindow", "3"))
-        self.pushButton_nine.setToolTip(_translate("MainWindow", "Number 9"))
         self.pushButton_nine.setText(_translate("MainWindow", "9"))
         self.pushButton_nine.setShortcut(_translate("MainWindow", "9"))
-        self.pushButton_eight.setToolTip(_translate("MainWindow", "Number 8"))
         self.pushButton_eight.setText(_translate("MainWindow", "8"))
         self.pushButton_eight.setShortcut(_translate("MainWindow", "8"))
-        self.pushButton_seven.setToolTip(_translate("MainWindow", "Number 7"))
         self.pushButton_seven.setText(_translate("MainWindow", "7"))
         self.pushButton_seven.setShortcut(_translate("MainWindow", "7"))
-        self.pushButton_four.setToolTip(_translate("MainWindow", "Number 4"))
         self.pushButton_four.setText(_translate("MainWindow", "4"))
         self.pushButton_four.setShortcut(_translate("MainWindow", "4"))
-        self.pushButton_five.setToolTip(_translate("MainWindow", "Number 5"))
         self.pushButton_five.setText(_translate("MainWindow", "5"))
         self.pushButton_five.setShortcut(_translate("MainWindow", "5"))
-        self.pushButton_six.setToolTip(_translate("MainWindow", "Number 6"))
         self.pushButton_six.setText(_translate("MainWindow", "6"))
         self.pushButton_six.setShortcut(_translate("MainWindow", "6"))
-        self.pushButton_zero.setToolTip(_translate("MainWindow", "Number 0"))
         self.pushButton_zero.setText(_translate("MainWindow", "0"))
         self.pushButton_zero.setShortcut(_translate("MainWindow", "0"))
         self.pushButton_dot.setToolTip(_translate("MainWindow", "Decimal separator"))
@@ -502,16 +503,16 @@ class Ui_MainWindow(object):
         self.pushButton_div.setShortcut(_translate("MainWindow", "/"))
         self.pushButton_result.setToolTip(_translate("MainWindow", "Result"))
         self.pushButton_result.setText(_translate("MainWindow", "="))
-        self.pushButton_result.setShortcut(_translate("MainWindow", "Enter"))
+        self.pushButton_result.setShortcut(_translate("MainWindow", "Return"))
         self.pushButton_del.setToolTip(_translate("MainWindow", "<html><head/><body><p>Delete one character</p></body></html>"))
         self.pushButton_del.setText(_translate("MainWindow", "DEL"))
         self.pushButton_del.setShortcut(_translate("MainWindow", "Backspace"))
         self.pushButton_clear.setToolTip(_translate("MainWindow", "Clear all"))
         self.pushButton_clear.setText(_translate("MainWindow", "C"))
         self.pushButton_clear.setShortcut(_translate("MainWindow", "Del"))
-        self.pushButton_pow.setToolTip(_translate("MainWindow", "<html><head/><body><p>Power (b^n)</p><p><span style=\" color:#25be62;\">------------------------------------------</span></p><p>b - base    </p><p>n - exponent</p><p>Base raised to the exponent</p></body></html>"))
+        self.pushButton_pow.setToolTip(_translate("MainWindow", "<html><head/><body><p>Power </p><p>a^n</p><p><span style=\" color:#25be62;\">------------------------------------------</span></p><p>a - base </p><p>n - exponent</p><p>Base raised to the exponent</p></body></html>"))
         self.pushButton_pow.setText(_translate("MainWindow", "^"))
-        self.pushButton_sqr.setToolTip(_translate("MainWindow", "<html><head/><body><p>Root (r^(1/i))</p><p><span style=\" color:#25be62;\">-------------------</span></p><p>r - radicand</p><p>i - index</p><p>i-th root of r</p></body></html>"))
+        self.pushButton_sqr.setToolTip(_translate("MainWindow", "<html><head/><body><p>Root </p><p>n√a</p><p><span style=\" color:#25be62;\">-------------------</span></p><p>n-th root of a</p></body></html>"))
         self.pushButton_sqr.setText(_translate("MainWindow", "√"))
         self.menuFunctions.setTitle(_translate("MainWindow", "Functions"))
         self.menuConvertor.setTitle(_translate("MainWindow", "Convertor"))
@@ -534,3 +535,4 @@ class Ui_MainWindow(object):
         self.actionMultiplication.setText(_translate("MainWindow", "Multiplication"))
         self.action_kw2hp.setText(_translate("MainWindow", "KW to HP"))
         self.action_lbsft2nm.setText(_translate("MainWindow", "lbs-ft to NM"))
+import resources

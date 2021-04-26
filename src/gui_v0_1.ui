@@ -79,7 +79,7 @@
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 1</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -108,7 +108,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 2</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -137,7 +137,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 3</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -172,7 +172,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      <bool>false</bool>
     </property>
     <property name="toolTip">
-     <string>Number 9</string>
+     <string/>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
@@ -207,7 +207,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 8</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -236,7 +236,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 7</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -265,7 +265,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 4</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -294,7 +294,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 5</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -323,7 +323,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 6</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -352,7 +352,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>Number 0</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(50, 50, 50); 
@@ -545,7 +545,7 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
      <string>=</string>
     </property>
     <property name="shortcut">
-     <string>Enter</string>
+     <string>Return</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_del">
@@ -622,7 +622,7 @@ QPushButton:pressed { background-color: rgb(100, 100, 100);} </string>
      </font>
     </property>
     <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Power (b^n)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;------------------------------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;b - base    &lt;/p&gt;&lt;p&gt;n - exponent&lt;/p&gt;&lt;p&gt;Base raised to the exponent&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Power &lt;/p&gt;&lt;p&gt;a^n&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;------------------------------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;a - base &lt;/p&gt;&lt;p&gt;n - exponent&lt;/p&gt;&lt;p&gt;Base raised to the exponent&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
@@ -649,7 +649,7 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
      </font>
     </property>
     <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Root (r^(1/i))&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;-------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;r - radicand&lt;/p&gt;&lt;p&gt;i - index&lt;/p&gt;&lt;p&gt;i-th root of r&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Root &lt;/p&gt;&lt;p&gt;n√a&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#25be62;&quot;&gt;-------------------&lt;/span&gt;&lt;/p&gt;&lt;p&gt;n-th root of a&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton { background-color: rgb(35, 176, 93);
@@ -710,6 +710,9 @@ QPushButton:pressed { background-color: rgb(42, 213, 116);}
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QLabel" name="label_results">
