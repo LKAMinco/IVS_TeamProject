@@ -18,7 +18,7 @@ Installation is available on Linux distributions supporting debian packages only
 Automatically installs all necessary software.
 
 ### Package
-Download debian package [here](https://github.com/LKAMinco/IVS_TeamProject/releases/download/untagged-685b2de6b3acddfd8274/calculathor_1.0_amd64.deb)
+Download debian package [here](https://github.com/LKAMinco/IVS_TeamProject/releases/download/untagged-295abe9fb84a433e688d/calculathor_1.0_amd64.deb)
 </br></br>
 In the same folder where the package was downloaded execute following command:
 ```
