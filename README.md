@@ -9,7 +9,7 @@ Official: [assignment for 2nd IVS project](http://ivs.fit.vutbr.cz/projekt-2_tym
 </p>
 
 <p align="center">
-  <img src="/mockup/mockup_matrix.png" alt="CalculaThor preview image" />
+  <img src="calculathor.png" alt="CalculaThor preview image" />
 </p>
 
 ## Installation - debian package
