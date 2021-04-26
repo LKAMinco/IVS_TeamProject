@@ -5,7 +5,8 @@ all: profile #  + project compilation
 
 #doc: TODO - spustenie generovania dokumentacie
 
-#run: TODO - spustenie programu
+run: main.py
+	python3 main.py
 
 profile: # TODO - zistit ci je nutne aj tento program profilovat
 	@echo "stddev.py is ready to run: ./"
