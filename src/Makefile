@@ -1,16 +1,19 @@
 # REQUIRED TARGETS (all, pack, clean, test, doc, run, profile)
-all: profile #  + project compilation
+all: run profile
 
 #pack: TODO zabalenie projektu na odovzdanie
 
-#doc: TODO - spustenie generovania dokumentacie
+doc: Doxyfile doc_clean
+	mkdir ../doc && cd ../doc && doxygen ../src/$<
+
+doc_clean:
+	cd .. && rm -rf doc 
 
 run: main.py
 	python3 main.py
 
-profile: # TODO - zistit ci je nutne aj tento program profilovat
-	@echo "stddev.py is ready to run: ./"
-	./stddev.py < ../profiling/profiling_input/data_1000.txt
+profile: stddev.py
+	chmod +x stddev.py
 
 test: 
 	python3 -m MathLib_Tests
