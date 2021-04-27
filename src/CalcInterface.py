@@ -393,22 +393,30 @@ def InputProcessing(input):
 	#Checks if there is a number after operand
 	if sInput[len(sInput)-1] == '' and sInput[len(sInput)-2] != '!' :
 		return 'Error'
+	if CheckInput(number, -1000000, 1000000, 0, 1) == False:
+		return 'Error'
 	for i in range(0, len(sInput)):
 		if sInput[i] == '+':
 			#Checks if next number is positiv or negative, in case of negative number it modifies the list
 			if sInput[i + 1] == '':
 				sInput[i + 1] = int(-1)*float(sInput[i + 3])
 				sInput[i + 2] = '0' #Replacement for '-', wont affect calculations
+			if CheckInput(sInput[i + 1], -1000000, 1000000, 0, 1) == False:
+				return 'Error'
 			number = MathLib.Add(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '-':
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1)*float(sInput[i + 3])
 				sInput[i + 2] = '0'
+			if CheckInput(sInput[i + 1], -1000000, 1000000, 0, 1) == False:
+				return 'Error'
 			number = MathLib.Sub(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '*':
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1)*float(sInput[i + 3])
 				sInput[i + 2] = '0'
+			if CheckInput(sInput[i + 1], -1000000, 1000000, 0, 1) == False:
+				return 'Error'
 			number = MathLib.Multiply(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '/':
 			if sInput[i + 1] == '': #Look at line 113 for definition
@@ -417,37 +425,47 @@ def InputProcessing(input):
 			#Division by 0 handling
 			if sInput[i + 1] == '0' or sInput[i + 1] == -0:
 				return 'Error'
+			if CheckInput(sInput[i + 1], -1000000, 1000000, 0, 1) == False:
+				return 'Error'
 			number = MathLib.Divide(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '!':
 			# Checks if number is positive or negative
-			if number < 0 or not float(number).is_integer():
+			if number < 0 or not float(number).is_integer() or number > 50:
 				return 'Error'
 			number = MathLib.Fac(float(number))
 		elif sInput[i] == 'abs':
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1)*float(sInput[i + 3])
 				sInput[i + 2] = '0'
+			if CheckInput(sInput[i + 1], -1000000, 1000000, 0, 1) == False:
+				return 'Error'
 			number = MathLib.Abs(float(sInput[i + 1]))
 		elif sInput[i] == 'sin':
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1)*float(sInput[i + 3])
 				sInput[i + 2] = '0'
+			if CheckInput(sInput[i + 1], -10000, 10000, 0, 1) == False:
+				return 'Error'
 			number = MathLib.Sin(float(sInput[i + 1]))
 		elif sInput[i] == 'cos':
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1)*float(sInput[i + 3])
 				sInput[i + 2] = '0'
+				if CheckInput(sInput[i + 1], -10000, 10000, 0, 1) == False:
+					return 'Error'
 			number = MathLib.Cos(float(sInput[i + 1]))
 		elif sInput[i] == '^':
 			if sInput[i + 1] == '': #Look at line 113 for definition
 				sInput[i + 1] = int(-1) * float(sInput[i + 3])
 				sInput[i + 2] = '0'
-			if CheckInput(sInput[i + 1], -10, 10,0,1) == False:
+			if CheckInput(sInput[i + 1], -20, 20,0,1) == False:
 				return 'Error: Invalid Exponent'
 			number = MathLib.Power(float(number), float(sInput[i + 1]))
 		elif sInput[i] == '√':
 			#If number is negative it returns error
 			if sInput[i + 1] == '':
+				return 'Error'
+			if CheckInput(sInput[i + 1], 0, 1000000, 0, 1) == False:
 				return 'Error'
 			number = MathLib.Root(float(sInput[i + 1]),float(sInput[i - 1]))
 	if float(number).is_integer():
