@@ -13,6 +13,7 @@
 # @date     14.4.2021
 
 import MathLib
+import webbrowser
 import re
 from PyQt5 import QtWidgets
 from gui import Ui_MainWindow
@@ -70,6 +71,9 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		self.action_deg2rad.triggered.connect(self.deg2rad_pressed)
 		self.action_nm2lbsft.triggered.connect(self.nm2lbsft_pressed)
 		self.action_lbsft2nm.triggered.connect(self.lbsft2nm_pressed)
+
+		#Create button connections for help	
+		self.actionDocumentation.triggered.connect(self.manual_pressed)
 
 	def digit_pressed(self):
 		button = self.sender()
@@ -303,6 +307,9 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			except SyntaxError:	
 				self.lineEdit_results.setText("Incorrect format")
 
+	def manual_pressed(self):
+		path = '../UserManual.pdf'
+		webbrowser.open_new(path)
 ##
 # @brief		Removes units from number
 #
