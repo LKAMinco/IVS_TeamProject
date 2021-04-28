@@ -14,7 +14,7 @@ run: main.py
 profile: stddev.py
 	chmod +x stddev.py
 
-test: 
+test: MathLib_Tests.py
 	python3 -m MathLib_Tests
 
 clean: # TODO - vymazanie suborov, ktore nemaju byt odovzdane
