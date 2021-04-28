@@ -308,7 +308,7 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 				self.lineEdit_results.setText("Incorrect format")
 
 	def manual_pressed(self):
-		path = '../UserManual.pdf'
+		path = '../dokumentace.pdf'
 		webbrowser.open_new(path)
 ##
 # @brief		Removes units from number
