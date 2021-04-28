@@ -3,11 +3,10 @@ all: run profile
 
 #pack: TODO zabalenie projektu na odovzdanie
 
-doc: Doxyfile doc_clean
-	mkdir ../doc && cd ../doc && doxygen ../src/$<
-
-doc_clean:
+doc: Doxyfile
 	cd .. && rm -rf doc 
+	mkdir ../doc
+	doxygen && rm -rf latex && mv html ../doc
 
 run: main.py
 	python3 main.py
@@ -23,10 +22,6 @@ clean: # TODO - vymazanie suborov, ktore nemaju byt odovzdane
 # Must be generated before installation
 reqs:
 	pip3 freeze > requirements.txt
-
-init:
-	pip3 install -r requirements.txt
-
 
 generate-prof-input:
 	../profiling/generate 
