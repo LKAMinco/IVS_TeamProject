@@ -149,7 +149,7 @@ def Deg2Rad(a):
 ##
 # @brief    Sine
 # 
-# @param    a    angle in radians 
+# @param    a    angle in degrees
 #
 # @return   Sine of a
 def Sin(a):
@@ -163,7 +163,7 @@ def Sin(a):
 ##
 # @brief    Cosine
 # 
-# @param    a    angle in radians 
+# @param    a    angle in degrees
 #
 # @return   Cosine of a
 def Cos(a):
