@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # Name:        stddev.py
 # Description: IVS Project 2
 # Author:      Simon Smida
@@ -12,7 +14,6 @@
 #
 # @date     16.4.2021
 
-#!/usr/bin/python3.8
 
 from MathLib import *
 import sys
@@ -52,7 +53,7 @@ def main():
         data = line.strip().replace('\n', ' ')
         values += [float(x) for x in data.split()]
 
-    print("{:.2f}".format(standardDeviation(values)))
+    print(standardDeviation(values))
 
 
 # Example usage: ./standardDeviation.py < data.txt
