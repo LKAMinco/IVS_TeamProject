@@ -1,0 +1,9 @@
+Package: calculathor
+Version: 1.0
+Architecture: amd64
+Maintainer: Simon Smida <simon.smida@stud.fit.vutbr.cz>
+Installed-Size: 74
+Depends: python3-pip, libxcb-xinerama0
+Section: python
+Priority: optional
+Description: Calculator app - IVS project2.

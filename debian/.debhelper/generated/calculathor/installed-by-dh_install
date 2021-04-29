@@ -1,0 +1,8 @@
+./install/logo.png
+./install/calculathor.desktop
+./install/calculathor
+./debian/requirements.txt
+./src/gui.py
+./src/MathLib.py
+./src/CalcInterface.py
+./src/main.py

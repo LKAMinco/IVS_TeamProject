@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=calculathor
+Comment=Simple calculator - ivs project 2
+Exec=/usr/bin/calculathor
+Icon=/usr/share/pixmaps/logo.png
+Type=Application
+Categories=Utility;Application;Qt;

@@ -1,0 +1,10 @@
+54aea4bbc08a19b389457e5b4f91130f  usr/bin/CalcInterface.py
+ea8831f23115532a793043ea620a245e  usr/bin/MathLib.py
+2d8338bb983f5eec2fdd0d2ff31b153b  usr/bin/calculathor
+5936167ae83886f180b37ab91dbd1fde  usr/bin/gui.py
+efbe1d3503beb9b754817f3cc91f80b6  usr/bin/main.py
+897e407fdaca094c8a467ded8e6e077d  usr/bin/requirements.txt
+fc9fabe7013df673d2fb35df0f0ee866  usr/share/applications/calculathor.desktop
+4c0001ca85fc8e4aa0383a6d15b0ac38  usr/share/doc/calculathor/changelog.gz
+5fe4037e57b57249e8de2c8e8499f570  usr/share/doc/calculathor/copyright
+a93bf54ccb02d9c0b0dd70e84896a3cd  usr/share/pixmaps/logo.png
