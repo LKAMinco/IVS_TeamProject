@@ -1,0 +1,9 @@
+install/logo.png /usr/share/pixmaps
+install/calculathor.desktop /usr/share/applications
+install/calculathor /usr/bin
+
+debian/requirements.txt /usr/bin
+src/gui.py /usr/bin
+src/MathLib.py /usr/bin
+src/CalcInterface.py /usr/bin
+src/main.py /usr/bin

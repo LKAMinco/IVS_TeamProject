@@ -1,0 +1,11 @@
+Source: calculathor
+Section: python
+Priority: optional
+Maintainer: Simon Smida <simon.smida@stud.fit.vutbr.cz>
+Build-Depends: debhelper-compat (= 12), python3-pip, libxcb-xinerama0
+Standards-Version: 4.4.1
+
+Package: calculathor
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-pip, libxcb-xinerama0
+Description: Calculator app - IVS project2.

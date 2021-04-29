@@ -1,4 +1,6 @@
-# REQUIRED TARGETS (all, pack, clean, test, doc, run, profile)
+# Contains every file necessarry
+MAIN_FOLDER = calculathor-1.0
+
 all: run profile
 
 #pack: TODO zabalenie projektu na odovzdanie
@@ -27,5 +29,8 @@ generate-prof-input:
 	../profiling/generate 
 	mv data_*.txt ../profiling/data_input
 
+deb:
+	cd ../../ && tar czvf $(MAIN_FOLDER).tar.gz $(MAIN_FOLDER)
+	cd ../ && dpkg-buildpackage -uc -b
 
 .PHONY: all doc doc_clean run profile test clean reqs init generate-prof-input
