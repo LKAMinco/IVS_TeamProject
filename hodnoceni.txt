@@ -1,0 +1,4 @@
+xhrabo15 100 (GIT Repository, GUI, Mockup, In-app hints)
+xbucko05 100 (Tests, Calculator controls, Makefile, GUI-Math Library link)
+xsmyka01 100 (Math library, Input processing, Documentation, User Manual)
+xsmida03 100 (Profiling, Makefile, Installer, README)
