@@ -1,0 +1,8 @@
+//TODO {NAME} - xhrabo15, xsmyka01, xbucko05, xsmida03
+IVS - Team project - Calculator
+
+Differences between planned and real development:
+- Some tasks were done by different people, we did not assessed scope of some some tasks correctly, so
+  they had to be redistributed.
+- Some deadlines were missed, like Makefile and Profiling output analysis. 
+- We have not used Trello, as we originally planned.
