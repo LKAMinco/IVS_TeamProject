@@ -487,8 +487,9 @@ def InputProcessing(input):
 	#Checks if there is a number after operand
 	if sInput[len(sInput)-1] == '' and sInput[len(sInput)-2] != '!' :
 		return 'Error'
-	if CheckInput(number, -1000000, 1000000, 0, 1) == False:
-		return 'Error'
+	if number != '':
+		if CheckInput(number, -1000000, 1000000, 0, 1) == False:
+			return 'Error'
 	for i in range(0, len(sInput)):
 		if sInput[i] == '+':
 			#Checks if next number is positiv or negative, in case of negative number it modifies the list
@@ -536,17 +537,23 @@ def InputProcessing(input):
 			number = MathLib.Abs(float(sInput[i + 1]))
 		elif sInput[i] == 'sin':
 			if sInput[i + 1] == '': #Look at line 113 for definition
-				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				if sInput[i + 2] == '-':
+					sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				else:
+					sInput[i + 1] = float(sInput[i + 3])
 				sInput[i + 2] = '0'
 			if CheckInput(sInput[i + 1], -10000, 10000, 0, 1) == False:
 				return 'Error'
 			number = MathLib.Sin(float(sInput[i + 1]))
 		elif sInput[i] == 'cos':
 			if sInput[i + 1] == '': #Look at line 113 for definition
-				sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				if sInput[i + 2] == '-':
+					sInput[i + 1] = int(-1)*float(sInput[i + 3])
+				else:
+					sInput[i + 1] = float(sInput[i + 3])
 				sInput[i + 2] = '0'
-				if CheckInput(sInput[i + 1], -10000, 10000, 0, 1) == False:
-					return 'Error'
+			if CheckInput(sInput[i + 1], -10000, 10000, 0, 1) == False:
+				return 'Error'
 			number = MathLib.Cos(float(sInput[i + 1]))
 		elif sInput[i] == '^':
 			if sInput[i + 1] == '': #Look at line 113 for definition
