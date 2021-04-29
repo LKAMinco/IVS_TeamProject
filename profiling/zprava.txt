@@ -10,8 +10,14 @@ Profiling was done for 3 different input files:
 These 3 files had been generated with 'generate' script,
 which filled mentioned files with pseudo random float numbers from range (-500, 500).
 
+With 10 inputs program ran approximately 1ms. Most often repeated function was function 'add', with 20 repeats, second most repeated function was 'power', with 11 repeats.
+Despite the number of repeats, total run time of these functions was approximately 0ms. Result from 10 inputs does not show any part of program, which needs to be more efficient.
 
-# TODO ANALYZE PROFILER OUTPUT
+With 100 inputs program ran approximately 1ms. Most often repeated function was function 'add', with 200 repeats, second most repeated function was 'power', with 101 repeats.
+Despite the number of repeats, total run time of these functions was approximately 0ms. Result from 100 inputs does not show any part of program, which needs to be more efficient.
+
+With 1000 inputs program ran approximately 2ms. Most often repeated function was function 'add', with 2000 repeats, second most repeated function was 'power', with 1001 repeats.
+There was a small slowdown on these functions, which was probably caused by the volume of repetitions and not by their implementation. 
 
 You can view the output images (output_X.png, where X = {10, 100, 1000})
 located in the current folder.
