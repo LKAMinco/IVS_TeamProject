@@ -404,6 +404,11 @@ def RemoveUnits(num):
 	operations = ['*','/','+','-','^','√','!','cos','sin','abs']
 	##Variable indicates whether the operation is present in expression from input 
 	present = 0
+	negative = 0
+	#Check if negative
+	if num[0] == '-':
+		num = num[1:]
+		negative = 1
 	for i in operations:
 		if i in num:
 			present = 1
@@ -417,13 +422,16 @@ def RemoveUnits(num):
 				num = num[:-1]
 			if dot_index != -1:
 				num = num[0:dot_index]+'.'+num[dot_index+1:]
+			if negative:
+			 	num = '-'+ num
 			return num
 		else:
 			if dot_index != -1:
 				num = num[0:dot_index]+'.'+num[dot_index+1:]
+			if negative:
+			 	num = '-'+ num
 			return num
-
-
+	
 ##
 # @brief		Checks user input for invalid chars and its size
 #
