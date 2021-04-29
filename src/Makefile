@@ -2,7 +2,17 @@
 MAIN_FOLDER := calculathor-1.0
 
 all: run profile
-#pack: TODO zabalenie projektu na odovzdanie
+
+pack: doc package
+	cd ../.. && zip -r xhrabo15_xsmyka01_xsmida03_xbucko05.zip xhrabo15_xsmyka01_xsmida03_xbucko05
+
+package: 
+	mkdir -p ../../xhrabo15_xsmyka01_xsmida03_xbucko05/repo
+	mkdir ../../xhrabo15_xsmyka01_xsmida03_xbucko05/install
+	mkdir ../../xhrabo15_xsmyka01_xsmida03_xbucko05/doc
+	cp -a ../../IVS_TeamProject/. ../../xhrabo15_xsmyka01_xsmida03_xbucko05/repo/
+	cp -a ../doc/. ../../xhrabo15_xsmyka01_xsmida03_xbucko05/doc/
+	cp -a ../install/. ../../xhrabo15_xsmyka01_xsmida03_xbucko05/install/
 
 doc: Doxyfile
 	cd .. && rm -rf doc 
@@ -18,7 +28,10 @@ profile: stddev.py
 test: MathLib_Tests.py
 	python3 -m MathLib_Tests
 
-clean: # TODO - vymazanie suborov, ktore nemaju byt odovzdane
+clean:
+	rm -rf __pycache__
+	rm -rf ../doc
+	rm ../../xhrabo15_xsmyka01_xsmida03_xbucko05.zip
 
 # Must be generated before installation
 reqs:
