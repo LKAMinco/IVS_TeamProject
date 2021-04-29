@@ -1,5 +1,3 @@
-# Name:			CalcInterface.py
-# Description:		IVS Project 2
 # Authors:		Jakub Julius Smykal, Filip Bucko
 # Date:			14.4.2021
 
@@ -76,21 +74,36 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		self.actionDocumentation.triggered.connect(self.manual_pressed)
 
 	def digit_pressed(self):
+		operations = ['*','/','+','-','^','√']
 		button = self.sender()
-		newLabel = self.lineEdit_results.text() + button.text()
+		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		#Verification of multiple occurence of zero at the beginning
-		if len(newLabel)>1:
-			if (newLabel[0]=='0') and (newLabel[1]!='.'):
-				newLabel = newLabel[1:]
-		self.lineEdit_results.setText(newLabel)
+		if(not newLabel):
+			self.lineEdit_results.setText(newLabel+button.text())
+		elif (button.text()=='0'):
+			if (len(newLabel) > 1):
+				if(newLabel[-1] == '0') and (newLabel[-2] in operations):
+					return
+			if (len(newLabel) == 1):
+				if(newLabel[0] == '0'):
+					return
+			newLabel = newLabel + button.text()
+			self.lineEdit_results.setText(newLabel)
+		else:
+			self.lineEdit_results.setText(newLabel+button.text())
 
 	def decimal_pressed(self):	
 		#Verification of multiple occurence of decimal point
 		newLabel = self.lineEdit_results.text()
 		
-		numbers = re.split('(\+|\-|\*|\/|\!|abs|sin|cos|\^|\√)' ,newLabel)
-		if (numbers[-1].count('.')==0):
-			self.lineEdit_results.setText(newLabel + '.')
+		if(newLabel):
+			numbers = re.split('(\+|\-|\*|\/|\!|abs|sin|cos|\^|\√)' ,newLabel)
+			if (numbers[-1].count('.')==0) and (newLabel[-1].isdigit()):
+				self.lineEdit_results.setText(newLabel + '.')
 	
 	def clear_pressed(self):
 		self.lineEdit_results.setText('')	
@@ -106,6 +119,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -120,6 +137,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -142,6 +163,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -156,6 +181,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+	 		 
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -170,6 +199,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -184,6 +217,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 			self.label_results.setText('')
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -202,6 +239,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	def sin_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -212,6 +253,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	def cos_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -222,6 +267,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	def abs_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -232,6 +281,10 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	def fac_pressed(self):
 		button = self.sender()
 		newLabel = self.lineEdit_results.text()
+		
+		if(ErrorCheck(self,newLabel)):
+			return
+		
 		if newLabel:
 			units = RemoveUnits(newLabel)
 			if (units != "present"):
@@ -244,6 +297,8 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	#Convertor
 	def hp2kw_pressed(self):
 		newLabel = self.lineEdit_results.text()
+		if(ErrorCheck(self,newLabel)):
+			return
 		if newLabel:
 			try:
 				newLabel = eval(newLabel)
@@ -254,6 +309,8 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 				self.lineEdit_results.setText("Incorrect format")
 	def kw2hp_pressed(self):
 		newLabel = self.lineEdit_results.text()
+		if(ErrorCheck(self,newLabel)):
+			return
 		if newLabel:
 			try:
 				newLabel = eval(newLabel)
@@ -265,6 +322,8 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 
 	def rad2deg_pressed(self):
 		newLabel = self.lineEdit_results.text()
+		if(ErrorCheck(self,newLabel)):
+			return
 		if newLabel:
 			try:
 				newLabel = eval(newLabel)
@@ -276,6 +335,8 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 
 	def deg2rad_pressed(self):
 		newLabel = self.lineEdit_results.text()
+		if(ErrorCheck(self,newLabel)):
+			return
 		if newLabel:
 			try:
 				newLabel = eval(newLabel)
@@ -287,6 +348,8 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	
 	def nm2lbsft_pressed(self):
 		newLabel = self.lineEdit_results.text()
+		if(ErrorCheck(self,newLabel)):
+			return
 		if newLabel:
 			try:
 				newLabel = eval(newLabel)
@@ -298,6 +361,8 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	
 	def lbsft2nm_pressed(self):
 		newLabel = self.lineEdit_results.text()
+		if(ErrorCheck(self,newLabel)):
+			return
 		if newLabel:
 			try:
 				newLabel = eval(newLabel)
@@ -310,6 +375,24 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 	def manual_pressed(self):
 		path = '../dokumentace.pdf'
 		webbrowser.open_new(path)
+
+
+
+##
+# @brief		 Checks if an error occurred on display.
+#				 If an error occurred function clears the screen.
+# @param display Input from calculator display
+#
+# @return 		 Returns 1 when an error occurred and display was cleared,
+#				 else 0.
+def ErrorCheck(out,display):
+	errors = ['E','I']
+	if (display) and (display[0] in errors):
+		CalculatorWindow.clear_pressed(out)
+		return 1
+	return 0	
+
+
 ##
 # @brief		Removes units from number
 #
@@ -325,7 +408,7 @@ def RemoveUnits(num):
 		if i in num:
 			present = 1
 			return "present"
-	if not present:	
+	if (not present) and num[0].isdigit() :	
 		dot_index = num.find('.')
 		if dot_index != -1:
 			num = num.replace('.','0',1)
