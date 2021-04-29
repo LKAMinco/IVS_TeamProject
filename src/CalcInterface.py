@@ -237,44 +237,20 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 		self.lineEdit_results.setText(str(result))
 
 	def sin_pressed(self):
-		button = self.sender()
+		CalculatorWindow.clear_pressed(self)
 		newLabel = self.lineEdit_results.text()
-		
-		if(ErrorCheck(self,newLabel)):
-			return
-		
-		if newLabel:
-			units = RemoveUnits(newLabel)
-			if (units != "present"):
-				newLabel = units
 		newLabel = newLabel + 'sin'
 		self.lineEdit_results.setText(newLabel)
 	
 	def cos_pressed(self):
-		button = self.sender()
+		CalculatorWindow.clear_pressed(self)
 		newLabel = self.lineEdit_results.text()
-		
-		if(ErrorCheck(self,newLabel)):
-			return
-
-		if newLabel:
-			units = RemoveUnits(newLabel)
-			if (units != "present"):
-				newLabel = units
 		newLabel = newLabel + 'cos'
 		self.lineEdit_results.setText(newLabel)
 	
 	def abs_pressed(self):
-		button = self.sender()
+		CalculatorWindow.clear_pressed(self)
 		newLabel = self.lineEdit_results.text()
-		
-		if(ErrorCheck(self,newLabel)):
-			return
-		
-		if newLabel:
-			units = RemoveUnits(newLabel)
-			if (units != "present"):
-				newLabel = units
 		newLabel = newLabel + 'abs'
 		self.lineEdit_results.setText(newLabel)
 	
@@ -385,6 +361,7 @@ class CalculatorWindow(QtWidgets.QMainWindow,Ui_MainWindow):
 #
 # @return 		 Returns 1 when an error occurred and display was cleared,
 #				 else 0.
+
 def ErrorCheck(out,display):
 	errors = ['E','I']
 	if (display) and (display[0] in errors):
@@ -400,6 +377,7 @@ def ErrorCheck(out,display):
 #				by tearing off the unitsin string format
 #
 # @return   	Returns string containing only numbers
+
 def RemoveUnits(num):
 	operations = ['*','/','+','-','^','√','!','cos','sin','abs']
 	##Variable indicates whether the operation is present in expression from input 
@@ -413,24 +391,26 @@ def RemoveUnits(num):
 		if i in num:
 			present = 1
 			return "present"
-	if (not present) and num[0].isdigit() :	
-		dot_index = num.find('.')
-		if dot_index != -1:
-			num = num.replace('.','0',1)
-		if not (num.isdigit()):
-			while not (num.isdigit()):
-				num = num[:-1]
+	if num:
+		if (not present) and num[0].isdigit() :	
+			dot_index = num.find('.')
 			if dot_index != -1:
-				num = num[0:dot_index]+'.'+num[dot_index+1:]
-			if negative:
-			 	num = '-'+ num
-			return num
-		else:
-			if dot_index != -1:
-				num = num[0:dot_index]+'.'+num[dot_index+1:]
-			if negative:
-			 	num = '-'+ num
-			return num
+				num = num.replace('.','0',1)
+			if not (num.isdigit()):
+				while not (num.isdigit()):
+					num = num[:-1]
+				if dot_index != -1:
+					num = num[0:dot_index]+'.'+num[dot_index+1:]
+				if negative:
+					num = '-'+ num
+				return num
+			else:
+				if dot_index != -1:
+					num = num[0:dot_index]+'.'+num[dot_index+1:]
+				if negative:
+					num = '-'+ num
+				return num
+	return num
 	
 ##
 # @brief		Checks user input for invalid chars and its size
