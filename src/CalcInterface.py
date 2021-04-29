@@ -375,6 +375,9 @@ def CheckInput(input, min, max, checkChar, chechSize):
 # @return   	Calculates the result of inserted numbers,operands
 
 def InputProcessing(input):
+	#Checks if there are any numbers in input, if not returns input
+	if any(char.isdigit() for char in input) == False:
+		return input
 	#Splits the string according to the operands
 	sInput = re.split('(\+|\-|\*|\/|\!|abs|sin|cos|\^|\√)' ,input)
 	if len(sInput) == 1:
