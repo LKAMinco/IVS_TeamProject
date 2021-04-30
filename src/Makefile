@@ -47,4 +47,4 @@ deb:
 	cd ../ && dpkg-buildpackage -rfakeroot -uc -b
 	cd ../../ && mv calculathor_1.0_amd64.deb $(MAIN_FOLDER)/install/
 
-.PHONY: all doc doc_clean run profile test clean reqs init generate-prof-input
+.PHONY: all doc run profile test clean reqs init generate-prof-input
